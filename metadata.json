@@ -1,0 +1,6 @@
+{
+  "name": "Dialectica",
+  "description": "Nền tảng học tập tương tác về Triết học Mác - Lênin: Phương pháp luận biện chứng và thực tiễn đời sống.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

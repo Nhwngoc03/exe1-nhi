@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/gemini/analyze",
+      "destination": "/api/gemini/analyze"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
