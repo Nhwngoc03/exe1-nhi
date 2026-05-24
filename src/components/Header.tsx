@@ -1,5 +1,5 @@
 import React from "react";
-import { BookOpen, User, Map, Compass, Sparkles, BookMarked } from "lucide-react";
+import { BookOpen, Map, Sparkles, BookMarked } from "lucide-react";
 
 interface HeaderProps {
   activeTab: string;
@@ -29,8 +29,6 @@ export default function Header({ activeTab, setActiveTab, userPoints }: HeaderPr
           {[
             { id: "curriculum", label: "Lộ trình" },
             { id: "library", label: "Thư viện" },
-            { id: "practice", label: "Thực tiễn & AI" },
-            { id: "profile", label: "Hồ sơ cá nhân" },
           ].map((tab) => {
             const isActive = activeTab === tab.id;
             return (
@@ -54,12 +52,6 @@ export default function Header({ activeTab, setActiveTab, userPoints }: HeaderPr
             <Sparkles className="w-3.5 h-3.5" />
             <span>{userPoints} ĐIỂM</span>
           </div>
-          <button 
-            onClick={() => setActiveTab("profile")}
-            className="flex items-center justify-center w-8 h-8 rounded-full bg-[#eeeeee] hover:bg-[#ffd9dc] text-[#5d5f5f] hover:text-[#6f0022] transition-colors"
-          >
-            <User className="w-5 h-5" />
-          </button>
         </div>
       </header>
 
@@ -68,8 +60,6 @@ export default function Header({ activeTab, setActiveTab, userPoints }: HeaderPr
         {[
           { id: "curriculum", label: "Lộ trình", icon: Map },
           { id: "library", label: "Thư viện", icon: BookMarked },
-          { id: "practice", label: "Thực tiễn", icon: Compass },
-          { id: "profile", label: "Hồ sơ", icon: User },
         ].map((tab) => {
           const Icon = tab.icon;
           const isActive = activeTab === tab.id;
