@@ -5,12 +5,14 @@ import Hero from "./components/Hero";
 import RoleOfPhilosophy from "./components/RoleOfPhilosophy";
 import PracticalitySection from "./components/PracticalitySection";
 import CognitiveProcess from "./components/CognitiveProcess";
+import DistortedPerception from "./components/DistortedPerception";
+import VerificationOfCognition from "./components/VerificationOfCognition";
 import TruthSection from "./components/TruthSection";
 import LibraryTab from "./components/LibraryTab";
 import QuizTab from "./components/QuizTab";
 
 import { UserProgress, Badge } from "./types";
-import { badges } from "./data";
+import { badges, scenarios } from "./data";
 import { Sparkles, ArrowRight, AlertCircle, BookOpen, Clock, PlaySquare } from "lucide-react";
 
 export default function App() {
@@ -176,7 +178,13 @@ export default function App() {
             />
 
             {/* Epistemological Cognitive Timeline showing Sensorial & Mental progress */}
-            <CognitiveProcess />
+            <CognitiveProcess onAddPoints={addPoints} />
+
+            {/* Chapter IV: Distorted Perception and Factors Affecting Cognition */}
+            <DistortedPerception onAddPoints={addPoints} />
+
+            {/* Chapter V: Verification of Cognition and Truth through Practice */}
+            <VerificationOfCognition onAddPoints={addPoints} />
 
             {/* Concept section explaining Truth */}
             <TruthSection />

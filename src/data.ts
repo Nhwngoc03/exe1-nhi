@@ -117,68 +117,198 @@ export const scenarios: Scenario[] = [
 export const quizQuestions: QuizQuestion[] = [
   {
     id: "q-1",
-    question: "Theo định nghĩa của Lênin, thuộc tính chung nhất của mọi dạng vật chất là gì?",
+    question: "Theo Karl Marx, điều gì quyết định một nhận thức có đúng hay không?",
     options: [
-      "Có khối lượng và kích thước hữu hạn",
-      "Tồn tại khách quan, độc lập với ý thức con người",
-      "Có thể nhìn thấy và sờ chạm trực tiếp được",
-      "Được cấu tạo từ nguyên tử và phân tử sinh học"
+      "Số người tin vào nó",
+      "Cảm xúc cá nhân",
+      "Thực tiễn kiểm nghiệm",
+      "Ý kiến của chuyên gia"
     ],
-    correctAnswerIndex: 1,
-    explanation: "Định nghĩa vật chất của Lênin chỉ rõ thuộc tính chung nhất và quan trọng nhất của mọi vật chất là 'thực tại khách quan độc lập với cảm giác/ý thức của con người'.",
-    points: 10
+    correctAnswerIndex: 2,
+    explanation: "Marx cho rằng chân lý phải được kiểm chứng bằng thực tiễn chứ không chỉ nằm ở lý thuyết.",
+    points: 3
   },
   {
     id: "q-2",
-    question: "Nguồn gốc trực tiếp và quan trọng nhất của Thực tiễn đối với Nhận thức là gì?",
+    question: "\"Thực tiễn\" trong triết học Mác là gì?",
     options: [
-      "Thực tiễn là cơ sở, động lực, mục đích của nhận thức và là tiêu chuẩn kiểm tra chân lý",
-      "Thực tiễn chỉ là nơi thí nghiệm sau khi con người suy ngẫm hoàn toàn trong tưởng tượng",
-      "Thực tiễn là một hoạt động tinh thần thuần túy siêu việt",
-      "Thực tiễn ko có mối quan hệ quyết định nào với việc tích lũy tri thức"
+      "Suy nghĩ trừu tượng",
+      "Hoạt động vật chất có mục đích của con người",
+      "Tranh luận học thuật",
+      "Niềm tin tôn giáo"
     ],
-    correctAnswerIndex: 0,
-    explanation: "Thực tiễn giữ vai trò quyết định đối với nhận thức: là cơ sở cung cấp tài liệu cho nhận thức, là động lực thúc đẩy khám phá khoa học, là cái đích cuối cùng, và là thước đo khách quan duy nhất để phân định chân lý hay sai lầm.",
-    points: 10
+    correctAnswerIndex: 1,
+    explanation: "Thực tiễn là toàn bộ hoạt động vật chất cảm tính có mục đích, mang tính lịch sử - xã hội của con người.",
+    points: 3
   },
   {
     id: "q-3",
-    question: "Hành trình biện chứng của sự phát triển nhận thức diễn ra như thế nào?",
+    question: "Vì sao thực tiễn được xem là cơ sở của nhận thức?",
     options: [
-      "Từ tư duy lý luận thuần túy đi thẳng đến niềm tin tôn giáo tâm linh",
-      "Từ phản xạ sinh học đơn giản đến nhận thức cảm tính thô sơ rồi dừng lại",
-      "Từ trực quan sinh động (cảm tính) đến tư duy trừu tượng (lý tính), rồi từ tư duy trừu tượng trở về thực tiễn",
-      "Nhận thức là ngẫu nhiên, ko theo bất kỳ quy luật logic nào"
+      "Vì con người thích trải nghiệm",
+      "Vì mọi hiểu biết đều bắt nguồn từ hoạt động thực tế",
+      "Vì sách vở không quan trọng",
+      "Vì công nghệ phát triển"
     ],
-    correctAnswerIndex: 2,
-    explanation: "Đây là quy luật nhận thức biện chứng do V.I.Lênin đúc kết: 'Từ trực quan sinh động đến tư duy trừu tượng, và từ tư duy trừu tượng đến thực tiễn - đó là con đường biện chứng của sự nhận thức chân lý'.",
-    points: 10
+    correctAnswerIndex: 1,
+    explanation: "Mọi hiểu biết của con người đều bắt nguồn từ hoạt động thực tế - nhận thức cảm tính bắt đầu từ thực tiễn.",
+    points: 3
   },
   {
     id: "q-4",
-    question: "Chân lý có mấy tính chất cơ bản?",
+    question: "Một sinh viên chỉ học lái xe qua video nhưng chưa từng thực hành. Điều này chứng minh:",
     options: [
-      "Chỉ có tính chủ quan phụ thuộc vào cảm xúc",
-      "Tính khách quan, tính cụ thể, và tính tương đối & tuyệt đối",
-      "Tính trừu tượng, tính tâm linh hữu hình, tính vĩnh hằng cứng nhắc",
-      "Tính ngẫu nhiên độc lập không có quy luật"
+      "Lý thuyết là đủ",
+      "Nhận thức không cần trải nghiệm",
+      "Thực tiễn giúp kiểm chứng và hoàn thiện nhận thức",
+      "Video không hữu ích"
     ],
-    correctAnswerIndex: 1,
-    explanation: "Chân lý luôn mang tính khách quan (nội dung chân lý không lệ thuộc vào ý muốn con người), tính cụ thể (gắn liền với điều kiện lịch sử nhất định) và sự thống nhất biện chứng giữa tính tương đối và tuyệt đối.",
-    points: 10
+    correctAnswerIndex: 2,
+    explanation: "Thực tiễn giúp kiểm chứng lý thuyết - lái xe thực tế sẽ phát hiện thiếu sót và hoàn thiện kỹ năng.",
+    points: 3
   },
   {
     id: "q-5",
-    question: "Sản xuất vật chất giữ vai trò gì đối với sự tồn tại và phát triển của xã hội?",
+    question: "Vai trò QUAN TRỌNG NHẤT của thực tiễn đối với nhận thức là:",
     options: [
-      "Là hoạt động thứ yếu chỉ dành cho người nghèo",
-      "Là nền tảng vật chất quyết định sự tồn tại và phát triển của xã hội loài người",
-      "Là sản phẩm của ý chí chủ quan từ các vĩ nhân lịch sử",
-      "Sản xuất vật chất không ảnh hưởng đến cấu trúc giai cấp của xã hội"
+      "Làm con người nổi tiếng",
+      "Kiểm tra tính đúng sai của nhận thức",
+      "Giúp tiết kiệm thời gian",
+      "Tạo ra cảm xúc"
     ],
     correctAnswerIndex: 1,
-    explanation: "Sản xuất vật chất là cơ sở quyết định trực tiếp sự tồn tại và phát triển của xã hội, hình thành nên các quan hệ sản xuất thực tế, từ đó quyết định kiến trúc thượng tầng xã hội.",
-    points: 10
+    explanation: "Thực tiễn là tiêu chuẩn kiểm tra chân lý - nó xác nhận điều đúng và bác bỏ điều sai.",
+    points: 3
+  },
+  {
+    id: "q-6",
+    question: "Trong đại dịch COVID-19, vaccine được công nhận hiệu quả sau khi:",
+    options: [
+      "Được quảng cáo mạnh",
+      "Có nhiều lượt xem trên mạng",
+      "Được kiểm nghiệm thực tế và thử nghiệm lâm sàng",
+      "Có giá cao"
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Đây là ví dụ thực tiễn chứng minh chân lý khoa học - vaccine được công nhận khi qua các thử nghiệm khoa học chặt chẽ.",
+    points: 3
+  },
+  {
+    id: "q-7",
+    question: "Theo lý luận nhận thức của chủ nghĩa Mác, quá trình nhận thức diễn ra theo con đường nào?",
+    options: [
+      "Từ niềm tin → thực tiễn → chân lý",
+      "Từ trực quan sinh động → tư duy trừu tượng → thực tiễn",
+      "Từ tưởng tượng → cảm xúc → hành động",
+      "Từ tranh luận → đồng thuận → kết luận"
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Quá trình nhận thức biện chứng: từ trực quan sinh động (cảm tính) → tư duy trừu tượng (lý tính) → trở về thực tiễn.",
+    points: 3
+  },
+  {
+    id: "q-8",
+    question: "\"Học đi đôi với hành\" phản ánh nội dung nào?",
+    options: [
+      "Vai trò của giáo dục",
+      "Vai trò của thực tiễn đối với nhận thức",
+      "Tầm quan trọng của cảm xúc",
+      "Vai trò của mạng xã hội"
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Câu nói này phản ánh rằng học tập phải gắn liền với thực hành - thực tiễn là đòi hỏi không thể thiếu.",
+    points: 3
+  },
+  {
+    id: "q-9",
+    question: "Một TikToker lan truyền mẹo chữa bệnh không có kiểm chứng khoa học. Theo quan điểm Marx, vấn đề ở đây là:",
+    options: [
+      "Nội dung chưa viral",
+      "Thiếu thực tiễn kiểm chứng",
+      "Thiếu sáng tạo",
+      "Không có âm nhạc hấp dẫn"
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Mẹo chữa bệnh chỉ trở thành chân lý khi được kiểm chứng bằng thực tiễn lâm sàng, chứ không phải lan truyền trên mạng.",
+    points: 3
+  },
+  {
+    id: "q-10",
+    question: "Thực tiễn KHÔNG bao gồm hoạt động nào sau đây?",
+    options: [
+      "Lao động sản xuất",
+      "Thực nghiệm khoa học",
+      "Hoạt động chính trị - xã hội",
+      "Suy nghĩ tưởng tượng thuần túy"
+    ],
+    correctAnswerIndex: 3,
+    explanation: "Thực tiễn là hoạt động vật chất có mục đích, còn suy nghĩ tưởng tượng thuần túy là hoạt động tinh thần không liên quan đến thực tế.",
+    points: 3
+  },
+  {
+    id: "q-11",
+    question: "Điều gì xảy ra nếu nhận thức tách rời thực tiễn?",
+    options: [
+      "Nhận thức trở nên chính xác hơn",
+      "Con người dễ rơi vào chủ quan, sai lầm",
+      "Khoa học phát triển nhanh hơn",
+      "Không ảnh hưởng gì"
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Khi nhận thức tách rời thực tiễn, con người sẽ mắc phải những sai lầm chủ quan như tin đồn, fake news, hoặc những ảo tưởng.",
+    points: 3
+  },
+  {
+    id: "q-12",
+    question: "Một công ty tạo AI nhưng không thử nghiệm với người dùng thực tế. Điều này dễ dẫn đến:",
+    options: [
+      "Thành công tuyệt đối",
+      "Sản phẩm thiếu hiệu quả thực tế",
+      "Nhiều giải thưởng hơn",
+      "Không có vấn đề gì"
+    ],
+    correctAnswerIndex: 1,
+    explanation: "AI phải được kiểm chứng qua thực tiễn sử dụng thực tế - nếu không, sản phẩm sẽ gặp vấn đề không lường trước được.",
+    points: 3
+  },
+  {
+    id: "q-13",
+    question: "Theo Marx, chân lý là:",
+    options: [
+      "Điều đa số tin tưởng",
+      "Điều giáo viên nói",
+      "Tri thức phù hợp với hiện thực khách quan",
+      "Điều xuất hiện trên internet"
+    ],
+    correctAnswerIndex: 2,
+    explanation: "Chân lý là tri thức phản ánh đúng hiện thực khách quan và đã được thực tiễn kiểm nghiệm.",
+    points: 3
+  },
+  {
+    id: "q-14",
+    question: "Ví dụ nào thể hiện \"thực tiễn là động lực của nhận thức\"?",
+    options: [
+      "Khoa học phát triển do nhu cầu chữa bệnh và sản xuất",
+      "Con người thích đọc sách",
+      "Nghệ sĩ sáng tác nhạc",
+      "Học sinh ngủ trong lớp"
+    ],
+    correctAnswerIndex: 0,
+    explanation: "Thực tiễn là động lực thúc đẩy sự phát triển của nhận thức - nhu cầu thực tế của xã hội đẩy khoa học phát triển.",
+    points: 3
+  },
+  {
+    id: "q-15",
+    question: "Câu nói nào phù hợp nhất với tư tưởng của Marx?",
+    options: [
+      "\"Nghe người khác là đủ.\"",
+      "\"Lý thuyết màu xám, cây đời mãi xanh.\"",
+      "\"Không cần trải nghiệm vẫn hiểu mọi thứ.\"",
+      "\"Chân lý nằm ở cảm xúc.\""
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Câu nói này của Goethe phù hợp với quan điểm Marx - lý thuyết phải được kiểm chứng bằng thực tiễn sống động.",
+    points: 3
   }
 ];
 

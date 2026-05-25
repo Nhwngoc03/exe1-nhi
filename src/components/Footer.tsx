@@ -15,7 +15,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
         >
           <BookOpen className="text-[#6f0022] w-6 h-6" />
           <span className="text-lg font-bold text-[#6f0022] font-sans">
-            Trialectica
+            Nhóm 3
           </span>
         </div>
         

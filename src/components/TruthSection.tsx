@@ -27,36 +27,89 @@ export default function TruthSection() {
         {/* 3 columns metrics table matching original prototype */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center pt-6 border-t border-white/20">
           
-          <div className="p-4 rounded-sm hover:bg-white/5 transition-all">
+          <div className="p-6 rounded-lg hover:bg-white/5 transition-all">
             <span className="block text-4xl sm:text-5xl font-extrabold text-[#ffb2ba] font-sans tracking-tight">100%</span>
-            <span className="text-xs sm:text-sm font-sans font-bold uppercase tracking-widest opacity-85 block mt-2 text-white">
+            <span className="text-xs sm:text-sm font-sans font-bold uppercase tracking-widest opacity-85 block mt-3 mb-3 text-white">
               Tính khách quan
             </span>
-            <span className="text-[11px] font-serif opacity-70 block mt-1.5 leading-relaxed text-center">
-              Nội dung chân lý thuộc về hiện thực vật chất tự thân, ko lệ thuộc cảm nhận chủ quan bất kì người nào.
+            <span className="text-[12px] font-serif opacity-75 block leading-relaxed text-center">
+              Nội dung chân lý thuộc về hiện thực vật chất tự thân, không lệ thuộc cảm nhận chủ quan của bất kì người nào.
             </span>
           </div>
 
-          <div className="p-4 rounded-sm hover:bg-white/5 transition-all mb-4 md:mb-0">
+          <div className="p-6 rounded-lg hover:bg-white/5 transition-all">
             <span className="block text-4xl sm:text-5xl font-extrabold text-[#ffb2ba] font-sans">∞</span>
-            <span className="text-xs sm:text-sm font-sans font-bold uppercase tracking-widest opacity-85 block mt-2 text-white">
-              Sự phát triển
+            <span className="text-xs sm:text-sm font-sans font-bold uppercase tracking-widest opacity-85 block mt-3 mb-4 text-white">
+              Tính phát triển
             </span>
-            <span className="text-[11px] font-serif opacity-70 block mt-1.5 leading-relaxed text-center">
-              Sự thống nhất biện chứng tuyệt diệu giữa tính tương đối và tính tuyệt đối để đạt sự hiểu biết sâu rộng.
-            </span>
+            <div className="space-y-3">
+              <div className="text-[12px] font-serif opacity-75 text-center leading-relaxed">
+                <strong className="block text-[#ffb2ba] mb-1">Tính tuyệt đối</strong>
+                <span>Sự phù hợp hoàn toàn giữa tri thức và khách thể (rất khó đạt tới)</span>
+              </div>
+              <div className="border-t border-white/10"></div>
+              <div className="text-[12px] font-serif opacity-75 text-center leading-relaxed">
+                <strong className="block text-[#ffb2ba] mb-1">Tính tương đối</strong>
+                <span>Sự phù hợp chưa hoàn toàn vì nhận thức con người luôn phát triển</span>
+              </div>
+            </div>
           </div>
 
-          <div className="p-4 rounded-sm hover:bg-white/5 transition-all">
+          <div className="p-6 rounded-lg hover:bg-white/5 transition-all">
             <span className="block text-4xl sm:text-5xl font-extrabold text-[#ffb2ba] font-sans">Δ</span>
-            <span className="text-xs sm:text-sm font-sans font-bold uppercase tracking-widest opacity-85 block mt-2 text-white">
+            <span className="text-xs sm:text-sm font-sans font-bold uppercase tracking-widest opacity-85 block mt-3 mb-3 text-white">
               Tính cụ thể
             </span>
-            <span className="text-[11px] font-serif opacity-70 block mt-1.5 leading-relaxed text-center">
-              Chân lý luôn sinh ra trong không gian, thời gian lịch sử - cụ thể nhất định. Không có chân lý trừu tượng chung chung!
+            <span className="text-[12px] font-serif opacity-75 block leading-relaxed text-center">
+              Chân lý luôn sinh ra trong không gian, thời gian lịch sử cụ thể nhất định. Không có chân lý trừu tượng chung chung!
             </span>
           </div>
 
+        </div>
+
+        {/* Section 2: Truth and Practice */}
+        <div className="mt-16 pt-12 border-t border-white/20">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-6 font-sans tracking-tight">
+             Mối quan hệ của chân lý với thực tiễn
+          </h3>
+          <div className="bg-white/5 rounded-lg p-8 border border-white/10 backdrop-blur-sm">
+            <p className="text-[13px] sm:text-sm font-serif opacity-90 leading-relaxed text-justify space-y-4">
+              <span className="block mb-3">
+                Chân lý và thực tiễn gắn bó chặt chẽ với nhau, có mối quan hệ song trùng trong quá trình vận động và phát triển của chúng.
+              </span>
+              <span className="block mb-3">
+                <strong className="text-[#ffb2ba]">Thực tiễn là tiêu chuẩn kiểm tra chân lý:</strong> Một tri thức chỉ được coi là đúng khi nó được kiểm nghiệm trong thực tế.
+              </span>
+              <span className="block">
+                <strong className="text-[#ffb2ba]">Mối quan hệ tương hỗ:</strong> Chân lý phát triển nhờ thực tiễn, còn thực tiễn cũng phát triển nhờ vận dụng đúng chân lý.
+              </span>
+            </p>
+          </div>
+        </div>
+
+        {/* Section 3: Significance of Truth in Modern Society */}
+        <div className="mt-12">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-6 font-sans tracking-tight">
+             Ý nghĩa của chân lý trong xã hội hiện nay
+          </h3>
+          <div className="space-y-4">
+            <div className="bg-white/5 rounded-lg p-6 border border-white/10 backdrop-blur-sm hover:bg-white/8 transition-all">
+              <div className="flex gap-4">
+                <span className="text-[#ffb2ba] font-bold text-lg flex-shrink-0">✓</span>
+                <p className="text-[13px] sm:text-sm font-serif opacity-90 leading-relaxed text-justify">
+                  <strong className="text-[#ffb2ba]">Phân biệt đúng – sai:</strong> Giúp con người phân biệt đúng – sai, nhất là trong thời đại mạng xã hội, nơi tin giả và thông tin sai lệch xuất hiện rất nhiều.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white/5 rounded-lg p-6 border border-white/10 backdrop-blur-sm hover:bg-white/8 transition-all">
+              <div className="flex gap-4">
+                <span className="text-[#ffb2ba] font-bold text-lg flex-shrink-0">✓</span>
+                <p className="text-[13px] sm:text-sm font-serif opacity-90 leading-relaxed text-justify">
+                  <strong className="text-[#ffb2ba]">Cơ sở ra quyết định:</strong> Là cơ sở để ra quyết định đúng trong học tập, quản lý, kinh tế, y tế, khoa học và đời sống.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>

@@ -48,7 +48,7 @@ export default function QuizTab({ onAddPoints, onCompleteQuiz, onUnlockBadge, is
       setQuizFinished(true);
       onCompleteQuiz("quiz-main");
       // Check for perfect score badge
-      if (quizScore + (selectedOption === currentQuestion.correctAnswerIndex ? currentQuestion.points : 0) === 50) {
+      if (quizScore + (selectedOption === currentQuestion.correctAnswerIndex ? currentQuestion.points : 0) === 45) {
         onUnlockBadge("badge-1");
       }
     }
@@ -83,24 +83,24 @@ export default function QuizTab({ onAddPoints, onCompleteQuiz, onUnlockBadge, is
 
           <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto pt-4">
             <div className="bg-[#f9f9f9] p-4 border border-[#e1bec0] rounded-sm">
-              <span className="block text-3xl font-black text-[#6f0022] font-mono">{quizScore}/50</span>
+              <span className="block text-3xl font-black text-[#6f0022] font-mono">{quizScore}/45</span>
               <span className="text-[10px] font-sans font-bold text-[#5c5c5c] uppercase">ĐIỂM TRẮC NGHIỆM</span>
             </div>
             <div className="bg-[#f9f9f9] p-4 border border-[#e1bec0] rounded-sm">
               <span className="block text-3xl font-black text-emerald-700 font-mono">
-                {Math.round((quizScore / 50) * 100)}%
+                {Math.round((quizScore / 45) * 100)}%
               </span>
               <span className="text-[10px] font-sans font-bold text-[#5c5c5c] uppercase">Chính xác</span>
             </div>
           </div>
 
           {/* Badge Unlocked Notification in Quiz */}
-          {quizScore === 50 && (
+          {quizScore === 45 && (
             <div className="p-4 bg-amber-50 border border-amber-200 text-amber-900 rounded-sm text-xs font-serif flex items-start gap-3 text-left max-w-md mx-auto">
               <ShieldCheck className="w-8 h-8 text-amber-600 flex-shrink-0 animate-pulse" />
               <div>
                 <strong className="font-sans font-bold text-amber-950 block">🔑 Đã kích hoạt Huy hiệu Đặc biệt!</strong>
-                Nhận được huy hiệu vinh dự <strong className="text-[#6f0022]">"Nhà Duy Vật Biện Chứng"</strong> vì đã vượt qua kiểm tra với số điểm tuyệt đối 50/50.
+                Nhận được huy hiệu vinh dự <strong className="text-[#6f0022]">"Nhà Duy Vật Biện Chứng"</strong> vì đã vượt qua kiểm tra với số điểm tuyệt đối 45/45.
               </div>
             </div>
           )}

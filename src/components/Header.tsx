@@ -17,7 +17,7 @@ export default function Header({ activeTab, setActiveTab, userPoints }: HeaderPr
         >
           <BookOpen className="text-[#6f0022] w-6 h-6 animate-pulse" />
           <span className="text-xl font-bold tracking-tight text-[#6f0022] font-sans">
-            Trialectica
+            Nhóm 3
           </span>
           <span className="hidden sm:inline-block text-xs bg-[#ffd9dc] text-[#6f0022] px-2 py-0.5 rounded-full font-sans font-medium">
             Mác - Lênin
