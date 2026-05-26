@@ -13,7 +13,12 @@ export function getFirebaseUrl(): string | null {
   if (envUrl && envUrl.trim() !== "") {
     return envUrl.trim();
   }
-  return localStorage.getItem("dialectica_firebase_url");
+  const localUrl = localStorage.getItem("dialectica_firebase_url");
+  if (localUrl && localUrl.trim() !== "") {
+    return localUrl.trim();
+  }
+  // Mặc định sử dụng Database của bạn để mọi người dùng đều truy cập chung một bảng điểm
+  return "https://mln-team3-default-rtdb.firebaseio.com";
 }
 
 /**
