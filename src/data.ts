@@ -143,32 +143,58 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: "q-3",
-    question: "Vì sao thực tiễn được xem là cơ sở của nhận thức?",
+    question: "Theo quan điểm của chủ nghĩa duy vật biện chứng, điều nào sau đây phản ánh đúng nhất vai trò của thực tiễn?",
     options: [
-      "Vì con người thích trải nghiệm",
-      "Vì mọi hiểu biết đều bắt nguồn từ hoạt động thực tế",
-      "Vì sách vở không quan trọng",
-      "Vì công nghệ phát triển"
+      "Là nguồn gốc duy nhất của cảm xúc",
+      "Là tiêu chuẩn kiểm tra chân lý",
+      "Là sản phẩm của tư duy lý tính",
+      "Là hoạt động tinh thần của con người"
     ],
     correctAnswerIndex: 1,
-    explanation: "Mọi hiểu biết của con người đều bắt nguồn từ hoạt động thực tế - nhận thức cảm tính bắt đầu từ thực tiễn.",
+    explanation: "Thực tiễn là tiêu chuẩn kiểm tra chân lý - nó xác nhận điều đúng và bác bỏ điều sai.",
     points: 3
   },
   {
     id: "q-4",
-    question: "Một sinh viên chỉ học lái xe qua video nhưng chưa từng thực hành. Điều này chứng minh:",
+    question: "Một người cho rằng: \"Tôi tận mắt thấy nên chắc chắn đúng.\" Theo quan điểm duy vật biện chứng, hạn chế lớn nhất của nhận định này là:",
     options: [
-      "Lý thuyết là đủ",
-      "Nhận thức không cần trải nghiệm",
-      "Thực tiễn giúp kiểm chứng và hoàn thiện nhận thức",
-      "Video không hữu ích"
+      "Đề cao tuyệt đối nhận thức cảm tính",
+      "Phủ nhận vai trò của giác quan",
+      "Đồng nhất thực tiễn với chân lý",
+      "Xem nhẹ hoạt động sản xuất vật chất"
     ],
-    correctAnswerIndex: 2,
-    explanation: "Thực tiễn giúp kiểm chứng lý thuyết - lái xe thực tế sẽ phát hiện thiếu sót và hoàn thiện kỹ năng.",
+    correctAnswerIndex: 0,
+    explanation: "Nhận thức cảm tính (nhìn thấy) phải được kiểm chứng bằng nhận thức lý tính sâu sắc - chỉ dựa vào cảm giác là không đủ.",
     points: 3
   },
   {
     id: "q-5",
+    question: "Nếu một giả thuyết khoa học rất logic nhưng thất bại khi áp dụng vào thực tế, theo Marx, điều đó cho thấy:",
+    options: [
+      "Thực tế luôn thay đổi nên không cần lý luận",
+      "Giả thuyết chưa đạt tới chân lý",
+      "Logic quan trọng hơn thực tiễn",
+      "Nhận thức cảm tính đáng tin hơn khoa học"
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Khi giả thuyết thất bại trong thực tiễn, điều đó chứng tỏ nó chưa phản ánh đúng hiện thực - chưa là chân lý.",
+    points: 3
+  },
+  {
+    id: "q-6",
+    question: "Galileo bác bỏ quan niệm \"vật nặng rơi nhanh hơn vật nhẹ\" bằng thực nghiệm. Điều này chứng minh:",
+    options: [
+      "Chân lý không phụ thuộc uy tín học thuật",
+      "Cảm giác luôn đánh lừa con người",
+      "Aristotle hoàn toàn sai trong mọi lĩnh vực",
+      "Thực nghiệm thay thế hoàn toàn lý luận"
+    ],
+    correctAnswerIndex: 0,
+    explanation: "Tuy Aristotle nổi tiếng nhưng thực tiễn kiểm chứng chứng minh ông sai - uy tín không quyết định chân lý.",
+    points: 3
+  },
+  {
+    id: "q-7",
     question: "Vai trò QUAN TRỌNG NHẤT của thực tiễn đối với nhận thức là:",
     options: [
       "Làm con người nổi tiếng",
@@ -177,11 +203,11 @@ export const quizQuestions: QuizQuestion[] = [
       "Tạo ra cảm xúc"
     ],
     correctAnswerIndex: 1,
-    explanation: "Thực tiễn là tiêu chuẩn kiểm tra chân lý - nó xác nhận điều đúng và bác bỏ điều sai.",
+    explanation: "Thực tiễn là tiêu chuẩn kiểm tra chân lý duy nhất - xác nhận điều đúng và bác bỏ điều sai.",
     points: 3
   },
   {
-    id: "q-6",
+    id: "q-8",
     question: "Trong đại dịch COVID-19, vaccine được công nhận hiệu quả sau khi:",
     options: [
       "Được quảng cáo mạnh",
@@ -190,11 +216,11 @@ export const quizQuestions: QuizQuestion[] = [
       "Có giá cao"
     ],
     correctAnswerIndex: 2,
-    explanation: "Đây là ví dụ thực tiễn chứng minh chân lý khoa học - vaccine được công nhận khi qua các thử nghiệm khoa học chặt chẽ.",
+    explanation: "Vaccine chỉ trở thành chân lý khoa học khi qua các thử nghiệm thực tiễn lâm sàng chặt chẽ.",
     points: 3
   },
   {
-    id: "q-7",
+    id: "q-9",
     question: "Theo lý luận nhận thức của chủ nghĩa Mác, quá trình nhận thức diễn ra theo con đường nào?",
     options: [
       "Từ niềm tin → thực tiễn → chân lý",
@@ -207,20 +233,7 @@ export const quizQuestions: QuizQuestion[] = [
     points: 3
   },
   {
-    id: "q-8",
-    question: "\"Học đi đôi với hành\" phản ánh nội dung nào?",
-    options: [
-      "Vai trò của giáo dục",
-      "Vai trò của thực tiễn đối với nhận thức",
-      "Tầm quan trọng của cảm xúc",
-      "Vai trò của mạng xã hội"
-    ],
-    correctAnswerIndex: 1,
-    explanation: "Câu nói này phản ánh rằng học tập phải gắn liền với thực hành - thực tiễn là đòi hỏi không thể thiếu.",
-    points: 3
-  },
-  {
-    id: "q-9",
+    id: "q-10",
     question: "Một TikToker lan truyền mẹo chữa bệnh không có kiểm chứng khoa học. Theo quan điểm Marx, vấn đề ở đây là:",
     options: [
       "Nội dung chưa viral",
@@ -233,7 +246,7 @@ export const quizQuestions: QuizQuestion[] = [
     points: 3
   },
   {
-    id: "q-10",
+    id: "q-11",
     question: "Thực tiễn KHÔNG bao gồm hoạt động nào sau đây?",
     options: [
       "Lao động sản xuất",
@@ -242,11 +255,11 @@ export const quizQuestions: QuizQuestion[] = [
       "Suy nghĩ tưởng tượng thuần túy"
     ],
     correctAnswerIndex: 3,
-    explanation: "Thực tiễn là hoạt động vật chất có mục đích, còn suy nghĩ tưởng tượng thuần túy là hoạt động tinh thần không liên quan đến thực tế.",
+    explanation: "Thực tiễn là hoạt động vật chất có mục đích, còn suy nghĩ tưởng tượng thuần túy là hoạt động tinh thần không liên quan đến thực tế khách quan.",
     points: 3
   },
   {
-    id: "q-11",
+    id: "q-12",
     question: "Điều gì xảy ra nếu nhận thức tách rời thực tiễn?",
     options: [
       "Nhận thức trở nên chính xác hơn",
@@ -255,11 +268,11 @@ export const quizQuestions: QuizQuestion[] = [
       "Không ảnh hưởng gì"
     ],
     correctAnswerIndex: 1,
-    explanation: "Khi nhận thức tách rời thực tiễn, con người sẽ mắc phải những sai lầm chủ quan như tin đồn, fake news, hoặc những ảo tưởng.",
+    explanation: "Khi nhận thức tách rời thực tiễn, con người sẽ mắc phải những sai lầm chủ quan như tin đồn, fake news.",
     points: 3
   },
   {
-    id: "q-12",
+    id: "q-13",
     question: "Một công ty tạo AI nhưng không thử nghiệm với người dùng thực tế. Điều này dễ dẫn đến:",
     options: [
       "Thành công tuyệt đối",
@@ -268,11 +281,11 @@ export const quizQuestions: QuizQuestion[] = [
       "Không có vấn đề gì"
     ],
     correctAnswerIndex: 1,
-    explanation: "AI phải được kiểm chứng qua thực tiễn sử dụng thực tế - nếu không, sản phẩm sẽ gặp vấn đề không lường trước được.",
+    explanation: "AI phải được kiểm chứng qua thực tiễn sử dụng thực tế - nếu không, sản phẩm sẽ gặp vấn đề không lường trước.",
     points: 3
   },
   {
-    id: "q-13",
+    id: "q-14",
     question: "Theo Marx, chân lý là:",
     options: [
       "Điều đa số tin tưởng",
@@ -285,20 +298,20 @@ export const quizQuestions: QuizQuestion[] = [
     points: 3
   },
   {
-    id: "q-14",
-    question: "Ví dụ nào thể hiện \"thực tiễn là động lực của nhận thức\"?",
+    id: "q-15",
+    question: "Ví dụ nào dưới đây phản ánh \"thực tiễn là động lực của nhận thức\"?",
     options: [
-      "Khoa học phát triển do nhu cầu chữa bệnh và sản xuất",
-      "Con người thích đọc sách",
-      "Nghệ sĩ sáng tác nhạc",
-      "Học sinh ngủ trong lớp"
+      "Con người nghiên cứu vaccine để chữa bệnh",
+      "Một người nhớ lại mùi vị của quả chanh",
+      "Học sinh ngủ trong lớp",
+      "Xem một bộ phim tài liệu lịch sử"
     ],
     correctAnswerIndex: 0,
-    explanation: "Thực tiễn là động lực thúc đẩy sự phát triển của nhận thức - nhu cầu thực tế của xã hội đẩy khoa học phát triển.",
+    explanation: "Thực tiễn (nhu cầu chữa bệnh) là động lực thúc đẩy sự phát triển của nhận thức khoa học.",
     points: 3
   },
   {
-    id: "q-15",
+    id: "q-16",
     question: "Câu nói nào phù hợp nhất với tư tưởng của Marx?",
     options: [
       "\"Nghe người khác là đủ.\"",
@@ -308,6 +321,19 @@ export const quizQuestions: QuizQuestion[] = [
     ],
     correctAnswerIndex: 1,
     explanation: "Câu nói này của Goethe phù hợp với quan điểm Marx - lý thuyết phải được kiểm chứng bằng thực tiễn sống động.",
+    points: 3
+  },
+  {
+    id: "q-17",
+    question: "Điểm cốt lõi trong luận điểm của Marx: \"Vấn đề chân lý không phải là vấn đề lý luận mà là vấn đề thực tiễn\" là:",
+    options: [
+      "Lý luận không có giá trị",
+      "Chân lý phải được hiện thực xác nhận",
+      "Con người chỉ cần hành động",
+      "Mọi nhận thức đều mang tính tương đối"
+    ],
+    correctAnswerIndex: 1,
+    explanation: "Luận điểm chính là: chân lý không phải tìm kiếm qua tranh luận lý thuyết mà phải được hiện thực (thực tiễn) xác nhận.",
     points: 3
   }
 ];

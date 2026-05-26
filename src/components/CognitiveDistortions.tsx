@@ -74,9 +74,9 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
           <div className="col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
             
             {/* Bias 1 */}
-            <div className="p-6 bg-[#f9f9f9] border border-[#e1bec0] rounded-sm relative hover:border-[#6f0022] transition-colors group">
-              <div className="absolute top-0 left-0 w-1 h-0 group-hover:h-full bg-[#6f0022] transition-all"></div>
-              <div className="text-[#6f0022] mb-3 flex justify-between items-center">
+            <div className="p-6 bg-[#f9f9f9] border border-[#C9B5A3] rounded-sm relative hover:border-[#663300] transition-colors group">
+              <div className="absolute top-0 left-0 w-1 h-0 group-hover:h-full bg-[#663300] transition-all"></div>
+              <div className="text-[#663300] mb-3 flex justify-between items-center">
                 <AlertTriangle className="w-8 h-8" />
                 <span className="text-[10px] font-mono tracking-widest text-[#5d5f5f]">BIAS 01</span>
               </div>
@@ -89,9 +89,9 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
             </div>
 
             {/* Bias 2 */}
-            <div className="p-6 bg-[#f9f9f9] border border-[#e1bec0] rounded-sm relative hover:border-[#6f0022] transition-colors group">
-              <div className="absolute top-0 left-0 w-1 h-0 group-hover:h-full bg-[#6f0022] transition-all"></div>
-              <div className="text-[#6f0022] mb-3 flex justify-between items-center">
+            <div className="p-6 bg-[#f9f9f9] border border-[#C9B5A3] rounded-sm relative hover:border-[#663300] transition-colors group">
+              <div className="absolute top-0 left-0 w-1 h-0 group-hover:h-full bg-[#663300] transition-all"></div>
+              <div className="text-[#663300] mb-3 flex justify-between items-center">
                 <EyeOff className="w-8 h-8" />
                 <span className="text-[10px] font-mono tracking-widest text-[#5d5f5f]">BIAS 02</span>
               </div>
@@ -104,9 +104,9 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
             </div>
 
             {/* Bias 3 */}
-            <div className="p-6 bg-[#f9f9f9] border border-[#e1bec0] rounded-sm relative hover:border-[#6f0022] transition-colors group">
-              <div className="absolute top-0 left-0 w-1 h-0 group-hover:h-full bg-[#6f0022] transition-all"></div>
-              <div className="text-[#6f0022] mb-3 flex justify-between items-center">
+            <div className="p-6 bg-[#f9f9f9] border border-[#C9B5A3] rounded-sm relative hover:border-[#663300] transition-colors group">
+              <div className="absolute top-0 left-0 w-1 h-0 group-hover:h-full bg-[#663300] transition-all"></div>
+              <div className="text-[#663300] mb-3 flex justify-between items-center">
                 <Megaphone className="w-8 h-8" />
                 <span className="text-[10px] font-mono tracking-widest text-[#5d5f5f]">BIAS 03</span>
               </div>
@@ -119,9 +119,9 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
             </div>
 
             {/* Bias 4 */}
-            <div className="p-6 bg-[#f9f9f9] border border-[#e1bec0] rounded-sm relative hover:border-[#6f0022] transition-colors group">
-              <div className="absolute top-0 left-0 w-1 h-0 group-hover:h-full bg-[#6f0022] transition-all"></div>
-              <div className="text-[#6f0022] mb-3 flex justify-between items-center">
+            <div className="p-6 bg-[#f9f9f9] border border-[#C9B5A3] rounded-sm relative hover:border-[#663300] transition-colors group">
+              <div className="absolute top-0 left-0 w-1 h-0 group-hover:h-full bg-[#663300] transition-all"></div>
+              <div className="text-[#663300] mb-3 flex justify-between items-center">
                 <Brain className="w-8 h-8" />
                 <span className="text-[10px] font-mono tracking-widest text-[#5d5f5f]">BIAS 04</span>
               </div>
@@ -196,9 +196,9 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
             </div>
 
             {/* AI Response Output (Spans 7 cols) */}
-            <div className="lg:col-span-7 bg-white p-5 border border-[#e1bec0] rounded-sm min-h-[180px] flex flex-col justify-between">
+            <div className="lg:col-span-7 bg-white p-5 border border-[#C9B5A3] rounded-sm min-h-[180px] flex flex-col justify-between">
               <div>
-                <span className="text-[9px] font-mono tracking-widest text-[#c6c6c7] block uppercase border-b border-[#e1bec0] pb-2.5 mb-3.5">
+                <span className="text-[9px] font-mono tracking-widest text-[#c6c6c7] block uppercase border-b border-[#C9B5A3] pb-2.5 mb-3.5">
                   MÔ-ĐUN GIẢI THÍCH CHÂN LÝ BIỆN CHỨNG
                 </span>
                 
@@ -219,7 +219,7 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
                   </div>
                 ) : (
                   <div className="flex flex-col items-center justify-center text-center py-12 text-[#c6c6c7]">
-                    <Shield className="w-12 h-12 mb-3 text-[#e1bec0]" />
+                    <Shield className="w-12 h-12 mb-3 text-[#C9B5A3]" />
                     <p className="font-serif text-xs text-[#5d5f5f]">
                       Điền lập luận vào hộp bên trái và nhấn Kích hoạt để xem giải trình học thuật. 
                       Nhận ngay <strong className="text-[#663300]">+15 Điểm học thuật</strong> và Huy hiểu Tri thức đặc biệt!
@@ -229,7 +229,7 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
               </div>
 
               {analysisResult && (
-                <div className="mt-4 pt-3 border-t border-dashed border-[#e1bec0] text-[10px] font-mono text-emerald-700 flex items-center gap-1.5 font-bold">
+                <div className="mt-4 pt-3 border-t border-dashed border-[#C9B5A3] text-[10px] font-mono text-emerald-700 flex items-center gap-1.5 font-bold">
                   <span>🔋 ĐÃ KIỂM CHỨNG KHÁCH QUAN HOÀN TẤT. NHẬN NGAY +15 ĐIỂM TƯ DUY!</span>
                 </div>
               )}

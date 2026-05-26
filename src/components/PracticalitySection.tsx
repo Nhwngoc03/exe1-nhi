@@ -48,7 +48,7 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
   const seasonDetails = {
     spring: {
       label: "🌸 Mùa Xuân",
-      bg: "from-[#fff5f6] to-[#ffd9dc]/40 border-[#ffd9dc]",
+      bg: "from-[#F0E8DF] to-[#E8D5C4]/40 border-[#E8D5C4]",
       treeColor: "text-[#d97706]",
       desc: "Hoa mai nở rộ sắc vàng rực rỡ, đâm chồi nảy lộc đón năm mới ấm áp.",
       insight: "Trực quan sinh động: Thị giác trực tiếp quan sát hoa mai nở rộ vàng tươi và chồi non lộc biếc trong thực tế."
@@ -153,18 +153,18 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
   ];
 
   return (
-    <section className="py-16 bg-[#f9f9f9] px-6 md:px-8 border-b border-[#e1bec0]">
+    <section className="py-16 bg-[#f9f9f9] px-6 md:px-8 border-b border-[#C9B5A3]">
       <div className="max-w-[1200px] mx-auto text-center">
         
         {/* Section Header */}
         <div className="mb-8">
-          <span className="text-[#6f0022] font-sans font-bold text-xs tracking-widest uppercase bg-[#ffd9dc] px-3 py-1 rounded-sm">
+          <span className="text-[#663300] font-sans font-bold text-xs tracking-widest uppercase bg-[#E8D5C4] px-3 py-1 rounded-sm">
             Chương II: Lý luận nhận thức
           </span>
           <h2 className="text-3xl font-extrabold text-[#1a1c1c] font-sans mt-3 mb-2 tracking-tight">
             Thực Tiễn — Nền Tảng Của Nhận Thức
           </h2>
-          <div className="w-12 h-1 bg-[#6f0022] mx-auto mt-3 rounded-full"></div>
+          <div className="w-12 h-1 bg-[#663300] mx-auto mt-3 rounded-full"></div>
         </div>
 
         {/* Navigation Tabs */}
@@ -179,8 +179,8 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
               onClick={() => setActiveTab(tab.id as any)}
               className={`font-sans text-xs font-bold tracking-wider uppercase px-6 py-3 rounded-full border transition-all cursor-pointer ${
                 activeTab === tab.id
-                  ? "bg-[#6f0022] text-white border-[#6f0022] shadow-sm"
-                  : "bg-white text-[#5d5f5f] border-[#e1bec0] hover:text-[#6f0022] hover:border-[#6f0022]"
+                  ? "bg-[#663300] text-white border-[#663300] shadow-sm"
+                  : "bg-white text-[#5d5f5f] border-[#C9B5A3] hover:text-[#663300] hover:border-[#663300]"
               }`}
             >
               {tab.label}
@@ -194,16 +194,16 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
               
               {/* Concept Text */}
-              <div className="lg:col-span-7 flex flex-col justify-between p-6 md:p-8 bg-white border border-[#e1bec0] rounded-sm shadow-sm">
+              <div className="lg:col-span-7 flex flex-col justify-between p-6 md:p-8 bg-white border border-[#C9B5A3] rounded-sm shadow-sm">
                 <div>
-                  <h3 className="text-xl font-bold text-[#6f0022] font-sans mb-4 border-b border-[#e1bec0] pb-2">
+                  <h3 className="text-xl font-bold text-[#663300] font-sans mb-4 border-b border-[#C9B5A3] pb-2">
                     Khái niệm "Thực tiễn"
                   </h3>
-                  <p className="font-serif text-sm md:text-base text-[#1a1c1c] leading-relaxed mb-6 bg-[#ffd9dc]/10 p-4 border-l-4 border-[#6f0022]">
+                  <p className="font-serif text-sm md:text-base text-[#1a1c1c] leading-relaxed mb-6 bg-[#E8D5C4]/10 p-4 border-l-4 border-[#663300]">
                     “Thực tiễn là toàn bộ những hoạt động vật chất - cảm tính có mục đích, mang tính lịch sử – xã hội của con người nhằm cải tạo tự nhiên và xã hội phục vụ nhân loại tiến bộ.”
                   </p>
                   
-                  <h4 className="font-sans font-bold text-xs text-[#6f0022] mb-2 uppercase tracking-wide">
+                  <h4 className="font-sans font-bold text-xs text-[#663300] mb-2 uppercase tracking-wide">
                     Hiểu một cách đơn giản nhất:
                   </h4>
                   <p className="font-serif text-sm text-[#5d5f5f] leading-relaxed mb-6">
@@ -211,8 +211,8 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
                   </p>
                 </div>
 
-                <div className="bg-[#fcfcfc] border border-[#e1bec0]/60 p-4 rounded-sm">
-                  <div className="flex items-center gap-2 mb-2 text-[#6f0022] font-bold text-xs">
+                <div className="bg-[#fcfcfc] border border-[#C9B5A3]/60 p-4 rounded-sm">
+                  <div className="flex items-center gap-2 mb-2 text-[#663300] font-bold text-xs">
                     <HelpCircle className="w-4 h-4" />
                     <span>HƯỚNG DẪN TƯƠNG TÁC</span>
                   </div>
@@ -226,7 +226,7 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
               <div className="lg:col-span-5 flex flex-col justify-between">
                 <div className={`border p-6 rounded-sm transition-all duration-500 shadow-sm bg-gradient-to-b ${seasonDetails[activeSeason].bg}`}>
                   <div className="flex justify-between items-center mb-4">
-                    <span className="font-sans font-bold text-sm text-[#6f0022]">{seasonDetails[activeSeason].label}</span>
+                    <span className="font-sans font-bold text-sm text-[#663300]">{seasonDetails[activeSeason].label}</span>
                     <Flower2 className={`w-5 h-5 animate-pulse ${seasonDetails[activeSeason].treeColor}`} />
                   </div>
                   
@@ -304,7 +304,7 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
                     {seasonDetails[activeSeason].desc}
                   </p>
                   <p className="font-sans text-[11px] text-[#5d5f5f] leading-relaxed bg-white/60 p-3 rounded-sm border border-white/50">
-                    💡 <strong className="text-[#6f0022]">Nhận thức:</strong> {seasonDetails[activeSeason].insight}
+                    💡 <strong className="text-[#663300]">Nhận thức:</strong> {seasonDetails[activeSeason].insight}
                   </p>
                 </div>
 
@@ -316,8 +316,8 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
                       onClick={() => handleSeasonClick(s)}
                       className={`text-[10px] font-sans font-bold py-2 border rounded-sm transition-all cursor-pointer ${
                         activeSeason === s
-                          ? "bg-[#6f0022] border-[#6f0022] text-white"
-                          : "bg-white border-[#e1bec0] text-[#5d5f5f] hover:bg-[#ffd9dc]/20"
+                          ? "bg-[#663300] border-[#663300] text-white"
+                          : "bg-white border-[#C9B5A3] text-[#5d5f5f] hover:bg-[#E8D5C4]/20"
                       }`}
                     >
                       {s === "spring" ? "Mùa Xuân" : s === "summer" ? "Mùa Hạ" : s === "autumn" ? "Mùa Thu" : "Mùa Đông"}
@@ -326,9 +326,9 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
                 </div>
 
                 {/* Season reward indicator */}
-                <div className="mt-4 p-3 border border-dashed border-[#e1bec0] rounded-sm text-center">
+                <div className="mt-4 p-3 border border-dashed border-[#C9B5A3] rounded-sm text-center">
                   {seasonPointsAwarded ? (
-                    <span className="text-xs font-sans font-bold text-[#6f0022] flex items-center justify-center gap-1">
+                    <span className="text-xs font-sans font-bold text-[#663300] flex items-center justify-center gap-1">
                       <Sparkles className="w-3.5 h-3.5 animate-pulse" />
                       Nhận thành công +10 điểm thực tiễn mai hoa!
                     </span>
@@ -350,9 +350,9 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
                 {characteristics.map((char, index) => {
                   const Icon = char.icon;
                   return (
-                    <div key={index} className="p-6 bg-white border border-[#e1bec0] rounded-sm shadow-sm relative group hover:border-[#6f0022] transition-colors">
-                      <div className="absolute top-0 left-0 w-full h-1 bg-[#e1bec0] group-hover:bg-[#6f0022] transition-colors"></div>
-                      <div className="w-10 h-10 bg-[#ffd9dc] text-[#6f0022] flex items-center justify-center rounded-sm mb-4">
+                    <div key={index} className="p-6 bg-white border border-[#C9B5A3] rounded-sm shadow-sm relative group hover:border-[#663300] transition-colors">
+                      <div className="absolute top-0 left-0 w-full h-1 bg-[#C9B5A3] group-hover:bg-[#663300] transition-colors"></div>
+                      <div className="w-10 h-10 bg-[#E8D5C4] text-[#663300] flex items-center justify-center rounded-sm mb-4">
                         <Icon className="w-5 h-5" />
                       </div>
                       <h4 className="font-sans font-bold text-base text-[#1a1c1c] mb-2">
@@ -361,8 +361,8 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
                       <p className="font-serif text-xs text-[#5d5f5f] leading-relaxed mb-4 text-justify">
                         {char.desc}
                       </p>
-                      <div className="text-[11px] font-sans bg-[#fbfbfb] p-3 rounded-sm border border-[#e1bec0]/40">
-                        <strong className="text-[#6f0022]">Ví dụ: </strong>
+                      <div className="text-[11px] font-sans bg-[#fbfbfb] p-3 rounded-sm border border-[#C9B5A3]/40">
+                        <strong className="text-[#663300]">Ví dụ: </strong>
                         <span className="text-[#594043] font-medium">{char.example}</span>
                       </div>
                     </div>
@@ -381,7 +381,7 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
               {/* Left Selector Grid (Spans 6 cols) */}
               <div className="md:col-span-6 flex flex-col justify-between gap-4">
                 <div>
-                  <h3 className="text-xl font-bold text-[#6f0022] font-sans mb-3">
+                  <h3 className="text-xl font-bold text-[#663300] font-sans mb-3">
                     3 Hình thức cơ bản của Thực tiễn
                   </h3>
                   <p className="font-serif text-sm text-[#5d5f5f] leading-relaxed mb-6">
@@ -400,19 +400,19 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
                         onClick={() => setActiveForm(key)}
                         className={`flex gap-4 p-4 border rounded-sm cursor-pointer transition-all ${
                           isActive
-                            ? "border-[#6f0022] bg-[#ffd9dc]/20 shadow-sm"
-                            : "border-[#e1bec0]/60 hover:bg-[#eeeeee]/50 bg-white"
+                            ? "border-[#663300] bg-[#E8D5C4]/20 shadow-sm"
+                            : "border-[#C9B5A3]/60 hover:bg-[#eeeeee]/50 bg-white"
                         }`}
                       >
                         <div className={`w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-sm ${
-                          isActive ? "bg-[#6f0022] text-white" : "bg-[#ffd9dc] text-[#6f0022]"
+                          isActive ? "bg-[#663300] text-white" : "bg-[#E8D5C4] text-[#663300]"
                         }`}>
                           <Icon className="w-5 h-5" />
                         </div>
                         <div>
                           <h4 className="font-sans font-bold text-sm text-[#1a1c1c] mb-1 flex items-center gap-2">
                             {item.title}
-                            {isActive && <Check className="w-3.5 h-3.5 text-[#6f0022]" />}
+                            {isActive && <Check className="w-3.5 h-3.5 text-[#663300]" />}
                           </h4>
                           <p className="font-serif text-xs text-[#5d5f5f]">
                             {item.description}
@@ -425,16 +425,16 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
               </div>
 
               {/* Right Detail Panel (Spans 6 cols) */}
-              <div className="md:col-span-6 bg-white border border-[#e1bec0] rounded-sm p-6 md:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
+              <div className="md:col-span-6 bg-white border border-[#C9B5A3] rounded-sm p-6 md:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
                 <div className="absolute right-0 bottom-0 opacity-5 pointer-events-none transform translate-x-6 translate-y-6">
                   {React.createElement(formsData[activeForm].icon, { className: "w-64 h-64" })}
                 </div>
 
                 <div className="z-10">
-                  <span className="text-[10px] font-sans font-bold text-[#6f0022] tracking-wider uppercase bg-[#ffd9dc] px-2 py-0.5 rounded-sm">
+                  <span className="text-[10px] font-sans font-bold text-[#663300] tracking-wider uppercase bg-[#E8D5C4] px-2 py-0.5 rounded-sm">
                     Phân tích bản chất học thuyết
                   </span>
-                  <h4 className="font-sans font-bold text-lg text-[#6f0022] mt-4 mb-2">
+                  <h4 className="font-sans font-bold text-lg text-[#663300] mt-4 mb-2">
                     {formsData[activeForm].title}
                   </h4>
                   <p className="font-serif text-sm text-[#5d5f5f] leading-relaxed text-justify mb-6">
@@ -442,8 +442,8 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
                   </p>
                 </div>
 
-                <div className="mt-4 pt-4 border-t border-[#e1bec0]/60 bg-[#fdfdfd] p-4 rounded-sm border-l-4 border-[#6f0022] z-10">
-                  <span className="font-sans font-bold text-xs text-[#6f0022] block mb-1.5 uppercase tracking-wide">
+                <div className="mt-4 pt-4 border-t border-[#C9B5A3]/60 bg-[#fdfdfd] p-4 rounded-sm border-l-4 border-[#663300] z-10">
+                  <span className="font-sans font-bold text-xs text-[#663300] block mb-1.5 uppercase tracking-wide">
                     Ví dụ cụ thể:
                   </span>
                   <p className="font-serif text-xs text-[#594043] italic leading-relaxed">
@@ -454,11 +454,11 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
             </div>
 
             {/* Lenin quote banner */}
-            <div className="relative overflow-hidden border border-[#e1bec0] bg-white rounded-sm p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm">
+            <div className="relative overflow-hidden border border-[#C9B5A3] bg-white rounded-sm p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm">
               <div className="flex items-start gap-4">
-                <Quote className="w-8 h-8 text-[#e1bec0] flex-shrink-0 mt-1" />
+                <Quote className="w-8 h-8 text-[#C9B5A3] flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-serif text-base italic text-[#6f0022] leading-relaxed font-bold">
+                  <p className="font-serif text-base italic text-[#663300] leading-relaxed font-bold">
                     "Thực tiễn là tiêu chuẩn khách quan duy nhất của chân lý."
                   </p>
                   <p className="text-[10px] font-sans font-bold text-[#5d5f5f] uppercase tracking-wider mt-1">
@@ -467,7 +467,7 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
                 </div>
               </div>
               <div className="text-right">
-                <span className="text-xs bg-[#ffd9dc] text-[#6f0022] px-3.5 py-1.5 rounded-sm font-sans font-bold tracking-wider uppercase">
+                <span className="text-xs bg-[#E8D5C4] text-[#663300] px-3.5 py-1.5 rounded-sm font-sans font-bold tracking-wider uppercase">
                   Mác - Lênin
                 </span>
               </div>
@@ -493,15 +493,15 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
                         onClick={() => handleRoleClick(i)}
                         className={`p-4 border rounded-sm cursor-pointer transition-all ${
                           isActive
-                            ? "border-[#6f0022] bg-[#ffd9dc]/20 shadow-sm"
-                            : "border-[#e1bec0]/60 bg-white hover:bg-[#eeeeee]/40"
+                            ? "border-[#663300] bg-[#E8D5C4]/20 shadow-sm"
+                            : "border-[#C9B5A3]/60 bg-white hover:bg-[#eeeeee]/40"
                         }`}
                       >
                         <div className="flex justify-between items-center">
-                          <h4 className={`font-sans font-bold text-sm ${isActive ? "text-[#6f0022]" : "text-[#1a1c1c]"}`}>
+                          <h4 className={`font-sans font-bold text-sm ${isActive ? "text-[#663300]" : "text-[#1a1c1c]"}`}>
                             {role.title.split(":")[0]}
                           </h4>
-                          {isRead && <CheckCircle className="w-3.5 h-3.5 text-[#6f0022]" />}
+                          {isRead && <CheckCircle className="w-3.5 h-3.5 text-[#663300]" />}
                         </div>
                         <p className="font-serif text-xs text-[#5d5f5f] mt-1 line-clamp-1">
                           {role.intro}
@@ -512,10 +512,10 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
                 </div>
 
                 {/* Score tracker block */}
-                <div className="p-4 bg-white border border-[#e1bec0] rounded-sm text-center">
+                <div className="p-4 bg-white border border-[#C9B5A3] rounded-sm text-center">
                   <div className="flex items-center justify-center gap-2 mb-1.5">
-                    <Sparkles className="w-4 h-4 text-[#6f0022] animate-pulse" />
-                    <span className="font-sans font-bold text-xs text-[#6f0022] uppercase tracking-wider">
+                    <Sparkles className="w-4 h-4 text-[#663300] animate-pulse" />
+                    <span className="font-sans font-bold text-xs text-[#663300] uppercase tracking-wider">
                       Điểm danh học tập
                     </span>
                   </div>
@@ -532,13 +532,13 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
               </div>
 
               {/* Right Detail Panel - Span 7 */}
-              <div className="lg:col-span-7 bg-white border border-[#e1bec0] rounded-sm p-6 md:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
+              <div className="lg:col-span-7 bg-white border border-[#C9B5A3] rounded-sm p-6 md:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
                 <div className="z-10">
-                  <div className="flex items-center gap-3 border-b border-[#e1bec0]/60 pb-3 mb-4">
-                    <div className="w-10 h-10 bg-[#ffd9dc] text-[#6f0022] flex items-center justify-center rounded-sm">
+                  <div className="flex items-center gap-3 border-b border-[#C9B5A3]/60 pb-3 mb-4">
+                    <div className="w-10 h-10 bg-[#E8D5C4] text-[#663300] flex items-center justify-center rounded-sm">
                       {React.createElement(rolesData[activeRole].icon, { className: "w-5 h-5" })}
                     </div>
-                    <h3 className="font-sans font-bold text-lg text-[#6f0022]">
+                    <h3 className="font-sans font-bold text-lg text-[#663300]">
                       {rolesData[activeRole].title}
                     </h3>
                   </div>
@@ -551,8 +551,8 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
                   </p>
                 </div>
 
-                <div className="bg-[#ffd9dc]/10 border border-[#e1bec0] p-4 rounded-sm z-10">
-                  <span className="font-sans font-bold text-xs text-[#6f0022] block mb-2 uppercase tracking-wide">
+                <div className="bg-[#E8D5C4]/10 border border-[#C9B5A3] p-4 rounded-sm z-10">
+                  <span className="font-sans font-bold text-xs text-[#663300] block mb-2 uppercase tracking-wide">
                     🔍 Ví dụ minh họa thực tế:
                   </span>
                   <p className="font-serif text-xs text-[#594043] leading-relaxed text-justify">

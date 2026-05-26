@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { quizQuestions } from "../data";
 import { QuizQuestion } from "../types";
-import { CheckCircle, XCircle, AlertCircle, Sparkles, Trophy, RotateCcw, ChevronRight, ShieldCheck } from "lucide-react";
+import { CheckCircle, XCircle, AlertCircle, Sparkles, Trophy, RotateCcw, ChevronRight, ShieldCheck, Clock } from "lucide-react";
 
 interface QuizTabProps {
   onAddPoints: (pts: number) => void;
@@ -26,6 +26,8 @@ export default function QuizTab({
   const [quizScore, setQuizScore] = useState<number>(0);
   const [quizFinished, setQuizFinished] = useState<boolean>(false);
   const [answeredWrongCount, setAnsweredWrongCount] = useState<number>(0);
+  const [timeLeft, setTimeLeft] = useState<number>(300); // 5 phút = 300 giây
+  const [quizStarted, setQuizStarted] = useState<boolean>(true);
 
   // Leaderboard states
   const [playerName, setPlayerName] = useState<string>(() => {
@@ -34,6 +36,25 @@ export default function QuizTab({
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [scoreSubmitted, setScoreSubmitted] = useState<boolean>(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+
+  // Timer countdown effect
+  useEffect(() => {
+    if (quizFinished || !quizStarted) return;
+    
+    const interval = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          // Hết giờ - tự động hoàn tất quiz
+          setQuizFinished(true);
+          onCompleteQuiz("quiz-main");
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [quizFinished, quizStarted, onCompleteQuiz]);
 
   const currentQuestion: QuizQuestion = quizQuestions[currentQuestionIdx];
 
@@ -100,6 +121,8 @@ export default function QuizTab({
     setAnsweredWrongCount(0);
     setScoreSubmitted(false);
     setSubmitError(null);
+    setTimeLeft(300); // Reset timer về 5 phút
+    setQuizStarted(true);
   };
 
   return (
@@ -111,6 +134,15 @@ export default function QuizTab({
           <div className="w-20 h-20 bg-[#E8D5C4] text-[#663300] rounded-full flex items-center justify-center mx-auto">
             <Trophy className="w-10 h-10" />
           </div>
+
+          {timeLeft === 0 && (
+            <div className="p-4 bg-red-50 border border-red-200 text-red-900 rounded-sm text-xs font-sans flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <strong>⏰ Hết giờ!</strong> Thời gian làm bài 5 phút đã kết thúc. Hệ thống tự động nộp bài.
+              </div>
+            </div>
+          )}
 
           <h2 className="text-3xl font-black text-[#1a1c1c] font-sans">
             Kết quả Trắc nghiệm Triết học
@@ -222,10 +254,30 @@ export default function QuizTab({
                 Học thuyết và Biện chứng quan
               </h1>
             </div>
-            <div className="text-right font-mono text-xs text-[#8B7355] font-semibold">
-              CÂU {currentQuestionIdx + 1} / {quizQuestions.length}
+            <div className="text-right space-y-2">
+              <div className="font-mono text-xs text-[#8B7355] font-semibold">
+                CÂU {currentQuestionIdx + 1} / {quizQuestions.length}
+              </div>
+              <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-sm font-sans font-bold text-xs tracking-wider ${
+                timeLeft <= 60 
+                  ? "bg-red-100 text-red-700" 
+                  : "bg-[#E8D5C4] text-[#663300]"
+              }`}>
+                <Clock className="w-3.5 h-3.5" />
+                <span>{Math.floor(timeLeft / 60)}:{(timeLeft % 60).toString().padStart(2, '0')}</span>
+              </div>
             </div>
           </div>
+
+          {/* Cảnh báo khi sắp hết giờ */}
+          {timeLeft <= 60 && timeLeft > 0 && (
+            <div className="p-4 bg-red-50 border border-red-200 text-red-900 rounded-sm text-xs font-sans flex items-start gap-3 animate-pulse">
+              <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <strong>⏰ Cảnh báo!</strong> Bạn còn {Math.floor(timeLeft / 60)} phút {(timeLeft % 60)} giây. Vui lòng hoàn tất các câu hỏi còn lại!
+              </div>
+            </div>
+          )}
 
           {/* Progress Indicators Bar */}
           <div className="w-full bg-[#E8DED3] h-1.5 rounded-full overflow-hidden">

@@ -16,8 +16,7 @@ import {
   fetchLeaderboard, 
   getFirebaseUrl, 
   saveFirebaseUrl, 
-  LeaderboardEntry, 
-  MOCK_LEADERBOARD 
+  LeaderboardEntry
 } from "../utils/leaderboard";
 
 interface LeaderboardTabProps {
@@ -43,8 +42,8 @@ export default function LeaderboardTab({ userPoints }: LeaderboardTabProps) {
     const url = getFirebaseUrl();
     
     if (!url) {
-      // Không có database, dùng mock data
-      setLeaderboard(MOCK_LEADERBOARD);
+      // Không có database, không hiển thị dữ liệu fake
+      setLeaderboard([]);
       setIsDemoMode(true);
       setLoading(false);
       return;
@@ -56,8 +55,8 @@ export default function LeaderboardTab({ userPoints }: LeaderboardTabProps) {
       setIsDemoMode(false);
     } catch (err: any) {
       console.error(err);
-      setError("Không thể tải bảng xếp hạng trực tuyến. Đang hiển thị dữ liệu thử nghiệm.");
-      setLeaderboard(MOCK_LEADERBOARD);
+      setError("Không thể tải bảng xếp hạng trực tuyến.");
+      setLeaderboard([]);
       setIsDemoMode(true);
     } finally {
       setLoading(false);
@@ -169,14 +168,14 @@ export default function LeaderboardTab({ userPoints }: LeaderboardTabProps) {
 
       {/* Thông báo Demo Mode / Lỗi */}
       {isDemoMode && (
-        <div className="p-4 bg-amber-50 border border-amber-200 text-amber-950 rounded-sm text-xs font-serif mb-6 flex items-start gap-3">
-          <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+        <div className="p-4 bg-blue-50 border border-blue-200 text-blue-950 rounded-sm text-xs font-serif mb-6 flex items-start gap-3">
+          <AlertTriangle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
           <div className="space-y-1">
-            <p className="font-sans font-bold text-amber-950">
-              ⚠️ Đang chạy ở chế độ Mô phỏng (Demo Mode)
+            <p className="font-sans font-bold text-blue-950">
+              ℹ️ Bảng xếp hạng chưa được kết nối
             </p>
             <p>
-              Bảng điểm hiện tại đang sử dụng các học viên ảo. Để kết nối với bảng điểm trực tuyến thực tế cho cả lớp cùng chơi, vui lòng click vào nút <strong>"KẾT NỐI DB"</strong> ở góc trên bên phải và dán link Firebase Database của bạn.
+              Để bắt đầu ghi nhận điểm số và xem bảng xếp hạng của lớp, vui lòng click vào nút <strong>"KẾT NỐI DB"</strong> ở góc trên bên phải và dán link Firebase Database của bạn.
             </p>
           </div>
         </div>
@@ -367,7 +366,7 @@ export default function LeaderboardTab({ userPoints }: LeaderboardTabProps) {
                     <div 
                       key={player.id || idx} 
                       className={`px-5 py-4 flex items-center justify-between transition-colors hover:bg-[#E8D5C4]/5 ${
-                        isTopThree ? "bg-[#ffd9dc]/5" : ""
+                        isTopThree ? "bg-[#E8D5C4]/5" : ""
                       }`}
                     >
                       <div className="flex items-center gap-4 min-w-0 mr-4">

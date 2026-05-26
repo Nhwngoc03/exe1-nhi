@@ -14,7 +14,7 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
     answerSelected: null
   });
 
-  const [sandboxTheory, setSandboxTheory] = useState<"startup" | "vaccine" | "physics">("startup");
+  const [sandboxTheory, setSandboxTheory] = useState<"startup" | "vaccine">("startup");
   const [sandboxStatus, setSandboxStatus] = useState<"idle" | "testing" | "success" | "failure">("idle");
   const [sandboxProgress, setSandboxProgress] = useState<number>(0);
   const [completedSandbox, setCompletedSandbox] = useState<string[]>([]);
@@ -44,22 +44,10 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
       },
       btnText: "Thử nghiệm lâm sàng",
       points: 10
-    },
-    physics: {
-      title: "Thí nghiệm rơi tự do (Galileo)",
-      theory: "Lý thuyết của bạn: Trái ngược với Aristot bảo thủ cho rằng vật nặng rơi nhanh hơn, bạn tin mọi vật rơi tự do cùng tốc độ bất chấp khối lượng.",
-      steps: {
-        idle: "Lập luận học thuật: Phe giáo điều Aristot phản đối và cự cãi kịch liệt.",
-        testing: "Đang thả hai quả cầu sắt 10kg và 1kg từ đỉnh tháp nghiêng Pisa...",
-        success: "🎉 Thành công chứng thực! Cả hai chạm đất cùng một lúc trước sự kinh ngạc của mọi người. Lý luận rơi tự do trở thành Chân lý khách quan (+10 điểm)!",
-        failure: "❌ Sai số thực tế! Gió thổi mạnh làm lệch đường rơi quả cầu. Cần làm lại thí nghiệm chuẩn xác trong môi trường chân không."
-      },
-      btnText: "Thả từ tháp nghiêng Pisa",
-      points: 10
     }
   };
 
-  const runSandboxTest = (scenarioKey: "startup" | "vaccine" | "physics") => {
+  const runSandboxTest = (scenarioKey: "startup" | "vaccine") => {
     if (sandboxStatus === "testing") return;
     setSandboxStatus("testing");
     setSandboxProgress(0);
@@ -110,17 +98,17 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
   };
 
   return (
-    <section id="role-section" className="py-16 px-6 md:px-8 bg-white border-b border-[#e1bec0] scroll-mt-20">
+    <section id="role-section" className="py-16 px-6 md:px-8 bg-white border-b border-[#C9B5A3] scroll-mt-20">
       <div className="max-w-[1200px] mx-auto">
 
         <div className="text-center mb-12">
-          <span className="text-[#6f0022] font-sans font-bold text-xs tracking-widest uppercase">
+          <span className="text-[#663300] font-sans font-bold text-xs tracking-widest uppercase">
             Vai trò của Triết học
           </span>
           <h2 className="text-3xl font-extrabold text-[#1a1c1c] font-sans mt-2 tracking-tight">
             Kim chỉ nam cho Tư duy
           </h2>
-          <div className="w-12 h-1 bg-[#6f0022] mx-auto mt-4 rounded-full"></div>
+          <div className="w-12 h-1 bg-[#663300] mx-auto mt-4 rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
@@ -129,14 +117,14 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
           <div
             onClick={() => setSelectedConcept(selectedConcept === "worldview" ? null : "worldview")}
             className={`cursor-pointer transition-all duration-300 relative p-8 border rounded-sm hover:-translate-y-1 ${selectedConcept === "worldview"
-              ? "border-[#6f0022] bg-[#ffd9dc]/10 shadow-md"
-              : "border-[#e1bec0] bg-white shadow-sm hover:border-[#6f0022]"
+              ? "border-[#663300] bg-[#E8D5C4]/10 shadow-md"
+              : "border-[#C9B5A3] bg-white shadow-sm hover:border-[#663300]"
               }`}
           >
-            <div className="absolute top-0 left-0 w-1.5 h-full bg-[#6f0022]"></div>
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-[#663300]"></div>
 
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-[#ffd9dc] text-[#6f0022] rounded-sm">
+              <div className="p-3 bg-[#E8D5C4] text-[#663300] rounded-sm">
                 <Map className="w-8 h-8" />
               </div>
               <span className="text-xs text-[#5d5f5f] font-mono select-none">
@@ -155,18 +143,18 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
 
             <ul className="space-y-3 font-sans text-xs font-semibold text-[#594043]">
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#6f0022]" />
+                <CheckCircle2 className="w-4 h-4 text-[#663300]" />
                 Định hướng giá trị đạo đức & lẽ sống
               </li>
               <li className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-[#6f0022]" />
+                <CheckCircle2 className="w-4 h-4 text-[#663300]" />
                 Giải thích khoa học các hiện tượng tự nhiên, xã hội
               </li>
             </ul>
 
             {selectedConcept === "worldview" && (
-              <div className="mt-6 p-4 bg-white/80 border border-[#e1bec0] rounded-sm font-serif text-xs text-[#5d5f5f] leading-relaxed animate-fade-in">
-                <strong className="text-[#6f0022] font-sans font-bold">Thế giới quan duy vật biện chứng:</strong> Là đỉnh cao phát triển của thế giới quan triết học, không chỉ giải thích thế giới dựa trên thực tế vật chất tự có mà còn khẳng định thế giới luôn biến đổi, tác động qua lại lẫn nhau chặt chẽ.
+              <div className="mt-6 p-4 bg-white/80 border border-[#C9B5A3] rounded-sm font-serif text-xs text-[#5d5f5f] leading-relaxed animate-fade-in">
+                <strong className="text-[#663300] font-sans font-bold">Thế giới quan duy vật biện chứng:</strong> Là đỉnh cao phát triển của thế giới quan triết học, không chỉ giải thích thế giới dựa trên thực tế vật chất tự có mà còn khẳng định thế giới luôn biến đổi, tác động qua lại lẫn nhau chặt chẽ.
               </div>
             )}
           </div>
@@ -175,14 +163,14 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
           <div
             onClick={() => setSelectedConcept(selectedConcept === "methodology" ? null : "methodology")}
             className={`cursor-pointer transition-all duration-300 relative p-8 border rounded-sm hover:-translate-y-1 ${selectedConcept === "methodology"
-              ? "border-[#6f0022] bg-[#ffd9dc]/10 shadow-md"
-              : "border-[#e1bec0] bg-white shadow-sm hover:border-[#6f0022]"
+              ? "border-[#663300] bg-[#E8D5C4]/10 shadow-md"
+              : "border-[#C9B5A3] bg-white shadow-sm hover:border-[#663300]"
               }`}
           >
-            <div className="absolute top-0 left-0 w-1.5 h-full bg-[#6f0022]"></div>
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-[#663300]"></div>
 
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-[#ffd9dc] text-[#6f0022] rounded-sm">
+              <div className="p-3 bg-[#E8D5C4] text-[#663300] rounded-sm">
                 <Wrench className="w-8 h-8" />
               </div>
               <span className="text-xs text-[#5d5f5f] font-mono select-none">
@@ -200,18 +188,18 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
 
             <ul className="space-y-3 font-sans text-xs font-semibold text-[#594043]">
               <li className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#6f0022]" />
+                <ShieldCheck className="w-4 h-4 text-[#663300]" />
                 Phân tích mâu thuẫn biện chứng nội tại để tìm nguồn lực tự thân
               </li>
               <li className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#6f0022]" />
+                <ShieldCheck className="w-4 h-4 text-[#663300]" />
                 Cách tiếp cận hệ thống, lịch sử - cụ thể trong mọi sự việc
               </li>
             </ul>
 
             {selectedConcept === "methodology" && (
-              <div className="mt-6 p-4 bg-white/80 border border-[#e1bec0] rounded-sm font-serif text-xs text-[#5d5f5f] leading-relaxed animate-fade-in">
-                <strong className="text-[#6f0022] font-sans font-bold">Phương pháp luận duy vật biện chứng:</strong> Yêu cầu nhìn nhận đối tượng toàn diện (nhiều mối quan hệ), phát triển (trong xu hướng biến đổi liên tục) và lịch sử cụ thể (gắn liền bối cảnh cụ thể).
+              <div className="mt-6 p-4 bg-white/80 border border-[#C9B5A3] rounded-sm font-serif text-xs text-[#5d5f5f] leading-relaxed animate-fade-in">
+                <strong className="text-[#663300] font-sans font-bold">Phương pháp luận duy vật biện chứng:</strong> Yêu cầu nhìn nhận đối tượng toàn diện (nhiều mối quan hệ), phát triển (trong xu hướng biến đổi liên tục) và lịch sử cụ thể (gắn liền bối cảnh cụ thể).
               </div>
             )}
           </div>
@@ -220,14 +208,14 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
           <div
             onClick={() => setSelectedConcept(selectedConcept === "critical" ? null : "critical")}
             className={`cursor-pointer transition-all duration-300 relative p-8 border rounded-sm hover:-translate-y-1 ${selectedConcept === "critical"
-              ? "border-[#6f0022] bg-[#ffd9dc]/10 shadow-md"
-              : "border-[#e1bec0] bg-white shadow-sm hover:border-[#6f0022]"
+              ? "border-[#663300] bg-[#E8D5C4]/10 shadow-md"
+              : "border-[#C9B5A3] bg-white shadow-sm hover:border-[#663300]"
               }`}
           >
-            <div className="absolute top-0 left-0 w-1.5 h-full bg-[#6f0022]"></div>
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-[#663300]"></div>
 
             <div className="flex items-center justify-between mb-4">
-              <div className="p-3 bg-[#ffd9dc] text-[#6f0022] rounded-sm">
+              <div className="p-3 bg-[#E8D5C4] text-[#663300] rounded-sm">
                 <Brain className="w-8 h-8" />
               </div>
               <span className="text-xs text-[#5d5f5f] font-mono select-none">
@@ -245,18 +233,18 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
 
             <ul className="space-y-3 font-sans text-xs font-semibold text-[#594043]">
               <li className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#6f0022]" />
+                <ShieldCheck className="w-4 h-4 text-[#663300]" />
                 Nhận diện các thiên kiến nhận thức và tin giả
               </li>
               <li className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#6f0022]" />
+                <ShieldCheck className="w-4 h-4 text-[#663300]" />
                 Đòi hỏi thực nghiệm, đối chiếu kiểm chứng khách quan
               </li>
             </ul>
 
             {selectedConcept === "critical" && (
-              <div className="mt-6 p-4 bg-white/80 border border-[#e1bec0] rounded-sm font-serif text-xs text-[#5d5f5f] leading-relaxed animate-fade-in">
-                <strong className="text-[#6f0022] font-sans font-bold">Tư duy phản biện triết học:</strong> Là năng lực tự ý thức khoa học, dùng lý tính và thực tiễn để thẩm định thông tin, chống lại sự áp đặt giáo điều và tư duy một chiều phiến diện.
+              <div className="mt-6 p-4 bg-white/80 border border-[#C9B5A3] rounded-sm font-serif text-xs text-[#5d5f5f] leading-relaxed animate-fade-in">
+                <strong className="text-[#663300] font-sans font-bold">Tư duy phản biện triết học:</strong> Là năng lực tự ý thức khoa học, dùng lý tính và thực tiễn để thẩm định thông tin, chống lại sự áp đặt giáo điều và tư duy một chiều phiến diện.
               </div>
             )}
           </div>
@@ -264,9 +252,9 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
         </div>
 
         {/* Interactive mini-check */}
-        <div className="p-6 bg-[#f9f9f9] border border-[#e1bec0] rounded-sm flex flex-col lg:flex-row shadow-sm gap-6 justify-between items-center text-left">
+        <div className="p-6 bg-[#f9f9f9] border border-[#C9B5A3] rounded-sm flex flex-col lg:flex-row shadow-sm gap-6 justify-between items-center text-left">
           <div className="flex items-start gap-4">
-            <HelpCircle className="w-10 h-10 text-[#6f0022] flex-shrink-0 mt-1" />
+            <HelpCircle className="w-10 h-10 text-[#663300] flex-shrink-0 mt-1" />
             <div>
               <h4 className="font-sans font-bold text-[#1a1c1c] text-sm">
                 Trắc nghiệm nhanh: Nhận diện vai trò tư duy
@@ -286,10 +274,10 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                 className={`px-4 py-2 text-xs font-sans font-bold transition-all border ${scoreCheck.answered
                   ? scoreCheck.answerSelected === i
                     ? scoreCheck.correct
-                      ? "bg-[#6f0022] text-white border-[#6f0022]"
+                      ? "bg-[#663300] text-white border-[#663300]"
                       : "bg-red-100 text-red-800 border-red-300"
                     : "bg-[#eeeeee] text-[#c0c0c0] border-transparent"
-                  : "bg-white hover:bg-[#ffd9dc]/30 text-[#6f0022] border-[#e1bec0]"
+                  : "bg-white hover:bg-[#E8D5C4]/30 text-[#663300] border-[#C9B5A3]"
                   }`}
               >
                 {option.text}
@@ -299,9 +287,9 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
         </div>
 
         {scoreCheck.answered && (
-          <div className="mt-3 p-4 bg-[#ffd9dc]/30 border border-[#e1bec0] text-xs font-serif text-[#1a1c1c] rounded-sm animate-fade-in">
+          <div className="mt-3 p-4 bg-[#E8D5C4]/30 border border-[#C9B5A3] text-xs font-serif text-[#1a1c1c] rounded-sm animate-fade-in">
             {scoreCheck.correct ? (
-              <span className="text-[#6f0022] font-sans font-bold block mb-1">🎉 Xuất sắc! Nhận ngay +10 điểm tư duy.</span>
+              <span className="text-[#663300] font-sans font-bold block mb-1">🎉 Xuất sắc! Nhận ngay +10 điểm tư duy.</span>
             ) : (
               <span className="text-red-800 font-sans font-bold block mb-1">💡 Chưa chính xác, hãy đọc lại lý thuyết nhé:</span>
             )}
@@ -310,33 +298,33 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
         )}
 
         {/* Karl Marx Quote & Core Epistemology Section */}
-        <div className="mt-16 pt-12 border-t border-[#e1bec0]">
+        <div className="mt-16 pt-12 border-t border-[#C9B5A3]">
           <div className="text-center mb-10">
-            <span className="text-[#6f0022] font-sans font-bold text-xs tracking-widest uppercase bg-[#ffd9dc] px-3 py-1 rounded-full">
+            <span className="text-[#663300] font-sans font-bold text-xs tracking-widest uppercase bg-[#E8D5C4] px-3 py-1 rounded-full">
               Chuyên đề học thuật
             </span>
             <h3 className="text-2xl font-extrabold text-[#1a1c1c] font-sans mt-3 tracking-tight">
               Thực Tiễn — Tiêu Chuẩn Duy Nhất Của Chân Lý
             </h3>
-            <div className="w-12 h-1 bg-[#6f0022] mx-auto mt-3 rounded-full"></div>
+            <div className="w-12 h-1 bg-[#663300] mx-auto mt-3 rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             {/* Column 1: Karl Marx's Quote - Span 7 */}
-            <div className="lg:col-span-7 bg-[#fbfbfb] border border-[#e1bec0] rounded-sm p-6 md:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
-              <div className="absolute -right-8 -top-8 text-[#e1bec0]/10 pointer-events-none">
+            <div className="lg:col-span-7 bg-[#fbfbfb] border border-[#C9B5A3] rounded-sm p-6 md:p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
+              <div className="absolute -right-8 -top-8 text-[#C9B5A3]/10 pointer-events-none">
                 <Quote className="w-36 h-36" />
               </div>
               
               <div>
                 <div className="flex items-center gap-2 mb-4">
-                  <Quote className="text-[#6f0022] w-5 h-5 flex-shrink-0" />
-                  <span className="font-sans font-extrabold text-xs text-[#6f0022] tracking-wider uppercase">
+                  <Quote className="text-[#663300] w-5 h-5 flex-shrink-0" />
+                  <span className="font-sans font-extrabold text-xs text-[#663300] tracking-wider uppercase">
                     Ý nghĩa câu nói của Karl Marx
                   </span>
                 </div>
 
-                <div className="bg-[#ffd9dc]/20 border-l-4 border-[#6f0022] p-4 mb-6">
+                <div className="bg-[#E8D5C4]/20 border-l-4 border-[#663300] p-4 mb-6">
                   <p className="font-serif text-sm md:text-base italic text-[#1a1c1c] leading-relaxed">
                     "Vấn đề tìm hiểu xem tư duy của con người có thể đạt tới chân lý khách quan không, hoàn toàn không phải là một vấn đề lý luận mà là một vấn đề thực tiễn."
                   </p>
@@ -346,8 +334,8 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                 </div>
 
                 <div className="space-y-4">
-                  <div className="bg-white border border-[#e1bec0] p-4 rounded-sm">
-                    <span className="inline-block text-[10px] font-sans font-extrabold bg-[#6f0022] text-white px-2 py-0.5 mb-2 rounded-sm uppercase">
+                  <div className="bg-white border border-[#C9B5A3] p-4 rounded-sm">
+                    <span className="inline-block text-[10px] font-sans font-extrabold bg-[#663300] text-white px-2 py-0.5 mb-2 rounded-sm uppercase">
                       Hiểu một cách đơn giản nhất
                     </span>
                     <p className="font-sans font-bold text-sm text-[#1a1c1c]">
@@ -356,8 +344,8 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="border border-[#e1bec0]/60 p-4 rounded-sm bg-white/50">
-                      <h4 className="font-sans font-bold text-xs text-[#6f0022] mb-1.5 uppercase">
+                    <div className="border border-[#C9B5A3]/60 p-4 rounded-sm bg-white/50">
+                      <h4 className="font-sans font-bold text-xs text-[#663300] mb-1.5 uppercase">
                         Lý thuyết không tự chứng minh
                       </h4>
                       <p className="font-serif text-xs text-[#5d5f5f] leading-relaxed">
@@ -365,8 +353,8 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                       </p>
                     </div>
 
-                    <div className="border border-[#e1bec0]/60 p-4 rounded-sm bg-white/50">
-                      <h4 className="font-sans font-bold text-xs text-[#6f0022] mb-1.5 uppercase">
+                    <div className="border border-[#C9B5A3]/60 p-4 rounded-sm bg-white/50">
+                      <h4 className="font-sans font-bold text-xs text-[#663300] mb-1.5 uppercase">
                         Thực tiễn là "trọng tài" duy nhất
                       </h4>
                       <p className="font-serif text-xs text-[#5d5f5f] leading-relaxed">
@@ -377,8 +365,8 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[#e1bec0]/50 bg-[#ffd9dc]/10 -mx-6 -mb-6 p-6 rounded-b-sm">
-                <span className="font-sans font-bold text-xs text-[#6f0022] block mb-1.5 uppercase tracking-wider">
+              <div className="mt-6 pt-4 border-t border-[#C9B5A3]/50 bg-[#E8D5C4]/10 -mx-6 -mb-6 p-6 rounded-b-sm">
+                <span className="font-sans font-bold text-xs text-[#663300] block mb-1.5 uppercase tracking-wider">
                   💡 Ví dụ thực tế:
                 </span>
                 <p className="font-serif text-xs text-[#594043] leading-relaxed">
@@ -388,7 +376,7 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
             </div>
 
             {/* Column 2: Core Epistemology & Simulator - Span 5 */}
-            <div className="lg:col-span-5 bg-[#1d0007] text-white rounded-sm p-6 md:p-8 flex flex-col justify-between shadow-md relative overflow-hidden border border-[#6f0022]">
+            <div className="lg:col-span-5 bg-[#4A3728] text-white rounded-sm p-6 md:p-8 flex flex-col justify-between shadow-md relative overflow-hidden border border-[#663300]">
               <div className="absolute -left-10 -bottom-10 text-white/5 pointer-events-none animate-spin" style={{ animationDuration: '20s' }}>
                 <RefreshCw className="w-48 h-48" />
               </div>
@@ -397,8 +385,8 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                 {/* Column Section Header */}
                 <div className="flex items-center justify-between mb-4 border-b border-white/10 pb-3">
                   <div className="flex items-center gap-2">
-                    <RefreshCw className="text-[#ffd9dc] w-5 h-5 animate-spin" style={{ animationDuration: '8s' }} />
-                    <span className="font-sans font-extrabold text-xs text-[#ffd9dc] tracking-wider uppercase">
+                    <RefreshCw className="text-[#E8D5C4] w-5 h-5 animate-spin" style={{ animationDuration: '8s' }} />
+                    <span className="font-sans font-extrabold text-xs text-[#E8D5C4] tracking-wider uppercase">
                       Lý luận nhận thức
                     </span>
                   </div>
@@ -408,7 +396,7 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                     <button
                       onClick={() => setColTab("sandbox")}
                       className={`text-[9px] font-sans font-bold px-2 py-1 rounded-sm transition-all ${
-                        colTab === "sandbox" ? "bg-[#6f0022] text-white" : "text-white/60 hover:text-white"
+                        colTab === "sandbox" ? "bg-[#663300] text-white" : "text-white/60 hover:text-white"
                       }`}
                     >
                       Mô phỏng
@@ -416,7 +404,7 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                     <button
                       onClick={() => setColTab("theory")}
                       className={`text-[9px] font-sans font-bold px-2 py-1 rounded-sm transition-all ${
-                        colTab === "theory" ? "bg-[#6f0022] text-white" : "text-white/60 hover:text-white"
+                        colTab === "theory" ? "bg-[#663300] text-white" : "text-white/60 hover:text-white"
                       }`}
                     >
                       Lý thuyết
@@ -426,13 +414,13 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
 
                 {colTab === "sandbox" ? (
                   <div className="animate-fade-in">
-                    <p className="font-serif text-[11px] text-[#ffd9dc] italic leading-relaxed mb-4">
+                    <p className="font-serif text-[11px] text-[#E8D5C4] italic leading-relaxed mb-4">
                       Nhận thức không phải là "copy-paste". Hãy chọn một lý thuyết dưới đây và kích hoạt thử nghiệm thực tiễn để kiểm chứng chân lý.
                     </p>
 
                     {/* Scenario Tabs */}
                     <div className="flex gap-1.5 mb-4">
-                      {(["startup", "vaccine", "physics"] as const).map((key) => (
+                      {(["startup", "vaccine"] as const).map((key) => (
                         <button
                           key={key}
                           disabled={sandboxStatus === "testing"}
@@ -443,19 +431,19 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                           }}
                           className={`flex-1 text-[9px] font-sans font-bold py-1.5 px-1 border transition-all ${
                             sandboxTheory === key
-                              ? "bg-[#ffd9dc] text-[#6f0022] border-[#ffd9dc]"
+                              ? "bg-[#E8D5C4] text-[#663300] border-[#E8D5C4]"
                               : "bg-white/5 hover:bg-white/10 border-white/10 text-white/85"
                           }`}
                         >
-                          {key === "startup" ? "Cần Tây - Bơ" : key === "vaccine" ? "Vắc-xin X" : "Tháp Pisa"}
+                          {key === "startup" ? "Cần Tây - Bơ" : "Vắc-xin X"}
                         </button>
                       ))}
                     </div>
 
                     {/* Sandbox Display Card */}
                     <div className="bg-white/5 border border-white/10 p-4 rounded-sm mb-4">
-                      <h4 className="font-sans font-bold text-xs text-[#ffd9dc] uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 bg-[#ffd9dc] rounded-full"></span>
+                      <h4 className="font-sans font-bold text-xs text-[#E8D5C4] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 bg-[#E8D5C4] rounded-full"></span>
                         {sandboxScenarios[sandboxTheory].title}
                       </h4>
                       <p className="font-serif text-[11.5px] text-white/90 leading-relaxed mb-3">
@@ -463,7 +451,7 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                       </p>
 
                       <div className="border-t border-white/10 pt-3 mt-3">
-                        <span className="text-[9px] font-sans font-extrabold tracking-wider uppercase text-[#ffd9dc] block mb-1">
+                        <span className="text-[9px] font-sans font-extrabold tracking-wider uppercase text-[#E8D5C4] block mb-1">
                           Trạng thái hiện tại:
                         </span>
                         <div className="font-sans text-[11.5px] leading-relaxed">
@@ -505,7 +493,7 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                       {sandboxStatus === "idle" && (
                         <button
                           onClick={() => runSandboxTest(sandboxTheory)}
-                          className="w-full bg-[#ffd9dc] text-[#6f0022] hover:bg-[#ffc2c7] font-sans font-bold text-xs tracking-wider py-2.5 rounded-sm transition-all active:scale-[0.98] uppercase cursor-pointer"
+                          className="w-full bg-[#E8D5C4] text-[#663300] hover:bg-[#D4BBAA] font-sans font-bold text-xs tracking-wider py-2.5 rounded-sm transition-all active:scale-[0.98] uppercase cursor-pointer"
                         >
                           ⚡ {sandboxScenarios[sandboxTheory].btnText}
                         </button>
@@ -551,7 +539,7 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                   </div>
                 ) : (
                   <div className="animate-fade-in">
-                    <p className="font-serif text-sm text-[#ffd9dc] italic leading-relaxed mb-6">
+                    <p className="font-serif text-sm text-[#E8D5C4] italic leading-relaxed mb-6">
                       Nhận thức không phải là "copy-paste". Bộ não không chụp ảnh thế giới thụ động, mà chúng ta chỉ thực sự hiểu thế giới thông qua quá trình chủ động tương tác và cải tạo nó.
                     </p>
 
@@ -559,10 +547,10 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
                       Vòng lặp nhận thức hoàn hảo
                     </h4>
 
-                    <div className="relative border-l border-[#ffd9dc]/30 pl-5 ml-2.5 space-y-6">
+                    <div className="relative border-l border-[#E8D5C4]/30 pl-5 ml-2.5 space-y-6">
                       {/* Step 1 */}
                       <div className="relative">
-                        <span className="absolute -left-[27px] top-0 w-3.5 h-3.5 rounded-full bg-[#ffd9dc] border-2 border-[#6f0022] flex items-center justify-center text-[8px] font-sans font-black text-[#6f0022]">1</span>
+                        <span className="absolute -left-[27px] top-0 w-3.5 h-3.5 rounded-full bg-[#E8D5C4] border-2 border-[#663300] flex items-center justify-center text-[8px] font-sans font-black text-[#663300]">1</span>
                         <h5 className="font-sans font-bold text-xs text-white uppercase">Bước 1: Nhu cầu Thực tiễn</h5>
                         <p className="font-serif text-[11px] text-white/85 mt-1 leading-relaxed">
                           Con người đối mặt với vấn đề nảy sinh trong thực tế đời sống xã hội (Ví dụ: bùng phát dịch bệnh nguy hiểm).
@@ -571,7 +559,7 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
 
                       {/* Step 2 */}
                       <div className="relative">
-                        <span className="absolute -left-[27px] top-0 w-3.5 h-3.5 rounded-full bg-[#ffd9dc] border-2 border-[#6f0022] flex items-center justify-center text-[8px] font-sans font-black text-[#6f0022]">2</span>
+                        <span className="absolute -left-[27px] top-0 w-3.5 h-3.5 rounded-full bg-[#E8D5C4] border-2 border-[#663300] flex items-center justify-center text-[8px] font-sans font-black text-[#663300]">2</span>
                         <h5 className="font-sans font-bold text-xs text-white uppercase">Bước 2: Phát triển Nhận thức</h5>
                         <p className="font-serif text-[11px] text-white/85 mt-1 leading-relaxed">
                           Tư duy, lý tính tìm kiếm giải pháp và đúc kết lý thuyết (Tiến hành nghiên cứu, chế tạo thuốc điều trị).
@@ -580,7 +568,7 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
 
                       {/* Step 3 */}
                       <div className="relative">
-                        <span className="absolute -left-[27px] top-0 w-3.5 h-3.5 rounded-full bg-[#ffd9dc] border-2 border-[#6f0022] flex items-center justify-center text-[8px] font-sans font-black text-[#6f0022]">3</span>
+                        <span className="absolute -left-[27px] top-0 w-3.5 h-3.5 rounded-full bg-[#E8D5C4] border-2 border-[#663300] flex items-center justify-center text-[8px] font-sans font-black text-[#663300]">3</span>
                         <h5 className="font-sans font-bold text-xs text-white uppercase">Bước 3: Kiểm chứng thực tế</h5>
                         <p className="font-serif text-[11px] text-white/85 mt-1 leading-relaxed">
                           Đưa lý thuyết/thuốc trở lại ứng dụng điều trị. Nếu bệnh được chữa khỏi, lý thuyết được xác nhận là chân lý. Nếu thất bại, ta điều chỉnh và bắt đầu lại.
@@ -592,7 +580,7 @@ export default function RoleOfPhilosophy({ onAddPoints, unlockedTermsCount }: Ro
               </div>
 
               <div className="mt-8 bg-white/10 border border-white/20 p-4 rounded-sm z-10">
-                <span className="font-sans font-bold text-xs text-[#ffd9dc] block mb-1 uppercase tracking-wider">
+                <span className="font-sans font-bold text-xs text-[#E8D5C4] block mb-1 uppercase tracking-wider">
                   📌 Kết luận quan trọng:
                 </span>
                 <p className="font-serif text-xs text-white/90 leading-relaxed">

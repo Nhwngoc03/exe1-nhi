@@ -72,7 +72,7 @@ export default function LibraryTab({ onAddPoints, onReadTerm, readTerms }: Libra
       
       {/* Upper header section */}
       <div className="mb-12">
-        <span className="text-[#6f0022] font-sans font-bold text-xs tracking-wider uppercase bg-[#ffd9dc] px-2.5 py-1 rounded-sm">
+        <span className="text-[#663300] font-sans font-bold text-xs tracking-wider uppercase bg-[#E8D5C4] px-2.5 py-1 rounded-sm">
           Tài nguyên Tri thức
         </span>
         <h1 className="text-3xl font-extrabold text-[#1a1c1c] font-sans mt-3">
@@ -99,7 +99,7 @@ export default function LibraryTab({ onAddPoints, onReadTerm, readTerms }: Libra
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Tìm vật chất, thực tiễn, chân lý..."
-                className="w-full pl-10 pr-4 py-2.5 bg-white border border-[#e1bec0] rounded-sm text-sm font-sans focus:ring-1 focus:ring-[#6f0022] focus:border-[#6f0022] focus:outline-none"
+                className="w-full pl-10 pr-4 py-2.5 bg-white border border-[#C9B5A3] rounded-sm text-sm font-sans focus:ring-1 focus:ring-[#663300] focus:border-[#663300] focus:outline-none"
               />
             </div>
 
@@ -107,7 +107,7 @@ export default function LibraryTab({ onAddPoints, onReadTerm, readTerms }: Libra
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="py-2.5 px-4 bg-white border border-[#e1bec0] rounded-sm text-xs font-sans font-semibold text-[#1a1c1c] focus:outline-none focus:ring-1 focus:ring-[#6f0022]"
+              className="py-2.5 px-4 bg-white border border-[#C9B5A3] rounded-sm text-xs font-sans font-semibold text-[#1a1c1c] focus:outline-none focus:ring-1 focus:ring-[#663300]"
             >
               {categories.map((cat, i) => (
                 <option key={i} value={cat}>
@@ -129,8 +129,8 @@ export default function LibraryTab({ onAddPoints, onReadTerm, readTerms }: Libra
                   onClick={() => selectTerm(item)}
                   className={`p-5 border cursor-pointer select-none transition-all rounded-sm flex flex-col justify-between relative ${
                     isSelected
-                      ? "border-[#6f0022] bg-[#ffd9dc]/10 shadow-sm"
-                      : "border-[#e1bec0] bg-white hover:border-[#6f0022]"
+                      ? "border-[#663300] bg-[#E8D5C4]/10 shadow-sm"
+                      : "border-[#C9B5A3] bg-white hover:border-[#663300]"
                   }`}
                 >
                   <div className="absolute top-3 right-3 flex items-center gap-1.5">
@@ -146,10 +146,10 @@ export default function LibraryTab({ onAddPoints, onReadTerm, readTerms }: Libra
                   </div>
 
                   <div>
-                    <span className="text-[10px] font-mono font-bold text-[#6f0022] tracking-wider uppercase block mb-1">
+                    <span className="text-[10px] font-mono font-bold text-[#663300] tracking-wider uppercase block mb-1">
                       {item.category}
                     </span>
-                    <h3 className="font-sans font-black text-base text-[#1a1c1c] mb-2 group-hover:text-[#6f0022]">
+                    <h3 className="font-sans font-black text-base text-[#1a1c1c] mb-2 group-hover:text-[#663300]">
                       {item.term}
                     </h3>
                     <p className="font-serif text-xs text-[#5d5f5f] line-clamp-3 text-justify leading-relaxed">
@@ -157,7 +157,7 @@ export default function LibraryTab({ onAddPoints, onReadTerm, readTerms }: Libra
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-dashed border-[#e1bec0] text-right font-sans text-[11px] font-semibold text-[#6f0022] flex items-center justify-end gap-1">
+                  <div className="mt-4 pt-3 border-t border-dashed border-[#C9B5A3] text-right font-sans text-[11px] font-semibold text-[#663300] flex items-center justify-end gap-1">
                     Xem chi tiết minh họa <ArrowRight className="w-3 h-3" />
                   </div>
                 </div>
@@ -178,12 +178,12 @@ export default function LibraryTab({ onAddPoints, onReadTerm, readTerms }: Libra
           
           {/* Detail card */}
           {activeTerm ? (
-            <div className="bg-[#f9f9f9] border-2 border-[#6f0022] rounded-sm p-6 relative shadow-sm">
-              <span className="absolute top-4 right-4 text-[9px] font-sans font-bold bg-[#ffd9dc] text-[#6f0022] px-2 py-0.5 rounded-sm uppercase tracking-wider block">
+            <div className="bg-[#f9f9f9] border-2 border-[#663300] rounded-sm p-6 relative shadow-sm">
+              <span className="absolute top-4 right-4 text-[9px] font-sans font-bold bg-[#E8D5C4] text-[#663300] px-2 py-0.5 rounded-sm uppercase tracking-wider block">
                 {activeTerm.category}
               </span>
 
-              <h4 className="font-sans font-black text-2xl text-[#6f0022] border-b border-[#e1bec0] pb-3 mb-4">
+              <h4 className="font-sans font-black text-2xl text-[#663300] border-b border-[#C9B5A3] pb-3 mb-4">
                 {activeTerm.vietnameseTerm}
               </h4>
 
@@ -197,8 +197,8 @@ export default function LibraryTab({ onAddPoints, onReadTerm, readTerms }: Libra
                   </p>
                 </div>
 
-                <div className="p-4 bg-white border border-[#e1bec0] rounded-sm italic">
-                  <h5 className="text-[10px] font-sans font-semibold uppercase tracking-wider text-[#6f0022] mb-1.5 not-italic">
+                <div className="p-4 bg-white border border-[#C9B5A3] rounded-sm italic">
+                  <h5 className="text-[10px] font-sans font-semibold uppercase tracking-wider text-[#663300] mb-1.5 not-italic">
                     Ví dụ trực quan sinh động:
                   </h5>
                   <p className="font-serif text-xs text-[#5d5f5f] leading-relaxed text-justify">
@@ -210,82 +210,21 @@ export default function LibraryTab({ onAddPoints, onReadTerm, readTerms }: Libra
               <button
                 type="button"
                 onClick={() => setActiveTerm(null)}
-                className="mt-6 w-full py-2 bg-white hover:bg-[#eeeeee] text-[#1a1c1c] border border-[#e1bec0] font-sans font-bold text-xs rounded-sm transition-colors flex items-center justify-center gap-1.5"
+                className="mt-6 w-full py-2 bg-white hover:bg-[#eeeeee] text-[#1a1c1c] border border-[#C9B5A3] font-sans font-bold text-xs rounded-sm transition-colors flex items-center justify-center gap-1.5"
               >
                 <Minimize2 className="w-4 h-4" /> Đóng chi tiết thuật ngữ
               </button>
             </div>
           ) : (
-            <div className="bg-white border border-[#e1bec0] border-dashed rounded-sm p-8 text-center text-[#5c5c5c] flex flex-col items-center justify-center min-h-[220px]">
-              <BookOpen className="w-12 h-12 text-[#e1bec0] mb-3 animate-bounce" />
+            <div className="bg-white border border-[#C9B5A3] border-dashed rounded-sm p-8 text-center text-[#5c5c5c] flex flex-col items-center justify-center min-h-[220px]">
+              <BookOpen className="w-12 h-12 text-[#C9B5A3] mb-3 animate-bounce" />
               <p className="font-serif text-sm">
                 Vui lòng nhấn chọn bất kỳ thuật ngữ nào ở cột bên học viên để mở rộng cấu trúc tri thức khoa học.
               </p>
             </div>
           )}
 
-          {/* AI Interactive Assistant widget */}
-          <div className="bg-[#6f0022]/5 border border-[#e1bec0] rounded-sm p-6 text-left">
-            <div className="flex items-center gap-2 mb-3">
-              <Sparkles className="text-[#6f0022] w-5 h-5 animate-pulse" />
-              <h4 className="font-sans font-bold text-[#6f0022] text-sm uppercase">
-                HỎI TRỢ LÝ TRIẾT HỌC 24/7 (AI Assistant)
-              </h4>
-            </div>
-            
-            <p className="font-serif text-xs text-[#5d5f5f] leading-relaxed mb-4">
-              Bạn có khúc mắc nào về Duy vật biện chứng, Duy vật lịch sử, Quy luật ngẫu nhiên hay bất cứ bài thi nào? Hãy hỏi Trợ lý Gemini để nhận đáp án rõ ràng có ví dụ trực quan.
-            </p>
-
-            <div className="space-y-3">
-              <input
-                type="text"
-                value={userQuestion}
-                onChange={(e) => setUserQuestion(e.target.value)}
-                placeholder="Câu hỏi: 'Phân biệt ý thức và bộ não người?'"
-                className="w-full px-4 py-2.5 bg-white border border-[#e1bec0] rounded-sm text-sm font-sans focus:outline-none focus:ring-1 focus:ring-[#6f0022]"
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") handleAskAI();
-                }}
-              />
-
-              <button
-                disabled={loading || !userQuestion.trim()}
-                onClick={handleAskAI}
-                className="w-full py-2 px-4 bg-[#6f0022] hover:bg-[#990033] text-white font-sans font-bold text-xs tracking-wider uppercase rounded-sm transition-colors flex items-center justify-center gap-2"
-              >
-                {loading ? (
-                  <>
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                    ĐANG KẾT NỐI HỌC GIẢ AI...
-                  </>
-                ) : (
-                  "GỬI THẮC MẮC ĐẾN TRỢ LÝ"
-                )}
-              </button>
-            </div>
-
-            {/* Answer Display */}
-            {(aiAnswer || errorText) && (
-              <div className="mt-4 p-4 bg-white border border-[#e1bec0] rounded-sm shadow-inner animate-fade-in">
-                {errorText ? (
-                  <p className="font-serif text-xs text-red-800">{errorText}</p>
-                ) : (
-                  <div className="space-y-2">
-                    <span className="text-[10px] font-sans font-extrabold text-[#6f0022] block uppercase border-b border-[#e1bec0] pb-1.5 mb-2">
-                      GIẢI ĐÁP TỪ TRỢ LÝ DIALECTICA:
-                    </span>
-                    <p className="font-serif text-xs text-slate-800 leading-relaxed text-justify whitespace-pre-line max-h-[300px] overflow-y-auto pr-1">
-                      {aiAnswer}
-                    </p>
-                    <div className="text-[9px] font-mono text-[#6f0022] mt-2 block font-extrabold">
-                      🔋 NHẬN NGAY +10 ĐIỂM HỌC THUẬT VÌ TINH THẦN HỎI ĐÚNG!
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
+   
 
         </div>
 

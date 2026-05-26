@@ -12,7 +12,7 @@ export default function ProfileTab({ progress, readTermsCount }: ProfileTabProps
   
   // Icon mapper helper
   const renderIcon = (iconName: string, unlocked: boolean) => {
-    const iconStyle = `w-8 h-8 ${unlocked ? "text-[#6f0022]" : "text-[#c0c0c0]"}`;
+    const iconStyle = `w-8 h-8 ${unlocked ? "text-[#663300]" : "text-[#c0c0c0]"}`;
     switch (iconName) {
       case "BrainCircuit":
         return <BrainCircuit className={iconStyle} />;
@@ -42,11 +42,11 @@ export default function ProfileTab({ progress, readTermsCount }: ProfileTabProps
     <div className="py-12 px-4 md:px-8 max-w-[1000px] mx-auto min-h-[70vh] animate-fade-in text-left">
       
       {/* Intro Profile card */}
-      <div className="bg-white border border-[#e1bec0] rounded-sm p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center shadow-sm relative">
-        <div className="absolute top-0 left-0 w-full h-1 bg-[#6f0022]"></div>
+      <div className="bg-white border border-[#C9B5A3] rounded-sm p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center shadow-sm relative">
+        <div className="absolute top-0 left-0 w-full h-1 bg-[#663300]"></div>
         
         {/* User avatar mockup */}
-        <div className="w-24 h-24 rounded-full bg-[#ffd9dc] text-[#6f0022] flex items-center justify-center text-4xl font-extrabold border-2 border-[#6f0022] flex-shrink-0">
+        <div className="w-24 h-24 rounded-full bg-[#E8D5C4] text-[#663300] flex items-center justify-center text-4xl font-extrabold border-2 border-[#663300] flex-shrink-0">
           ML
         </div>
 
@@ -56,7 +56,7 @@ export default function ProfileTab({ progress, readTermsCount }: ProfileTabProps
             <h2 className="text-2xl font-black text-[#1a1c1c] font-sans">
               Học Viên Biện Chứng
             </h2>
-            <span className="px-2.5 py-0.5 bg-[#6f0022] text-white text-[10px] font-sans font-bold uppercase tracking-wider rounded-full">
+            <span className="px-2.5 py-0.5 bg-[#663300] text-white text-[10px] font-sans font-bold uppercase tracking-wider rounded-full">
               Thành viên tích cực
             </span>
           </div>
@@ -66,13 +66,13 @@ export default function ProfileTab({ progress, readTermsCount }: ProfileTabProps
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <div className="bg-[#f9f9f9] border border-[#e1bec0] rounded-sm px-4 py-2 flex items-center gap-2.5 text-xs text-[#1a1c1c] font-sans font-semibold">
-              <Sparkles className="w-4.5 h-4.5 text-[#6f0022]" />
+            <div className="bg-[#f9f9f9] border border-[#C9B5A3] rounded-sm px-4 py-2 flex items-center gap-2.5 text-xs text-[#1a1c1c] font-sans font-semibold">
+              <Sparkles className="w-4.5 h-4.5 text-[#663300]" />
               <span>Chức danh: <strong>{level.title}</strong></span>
             </div>
             
-            <div className="bg-[#ffd9dc]/20 border border-[#e1bec0] rounded-sm px-4 py-2 flex items-center gap-2.5 text-xs text-[#6f0022] font-sans font-bold">
-              <Award className="w-4.5 h-4.5 text-[#6f0022]" />
+            <div className="bg-[#E8D5C4]/20 border border-[#C9B5A3] rounded-sm px-4 py-2 flex items-center gap-2.5 text-xs text-[#663300] font-sans font-bold">
+              <Award className="w-4.5 h-4.5 text-[#663300]" />
               <span>Điểm kinh nghiệm: <strong>{progress.score} XP</strong></span>
             </div>
           </div>
@@ -82,40 +82,40 @@ export default function ProfileTab({ progress, readTermsCount }: ProfileTabProps
       {/* Grid statistics metrics */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 my-8">
         
-        <div className="bg-white p-5 border border-[#e1bec0] rounded-sm flex items-center justify-between">
+        <div className="bg-white p-5 border border-[#C9B5A3] rounded-sm flex items-center justify-between">
           <div>
             <span className="text-[10px] font-sans font-bold text-[#c6c6c7] uppercase">Tiến trình Thư học</span>
-            <span className="block text-2xl font-black text-[#6f0022] mt-1 font-mono">{readTermsCount}/8</span>
+            <span className="block text-2xl font-black text-[#663300] mt-1 font-mono">{readTermsCount}/8</span>
             <span className="text-xs font-serif text-[#5d5f5f] mt-1 block">Khái niệm đã giải nghĩa</span>
           </div>
-          <BookOpen className="w-10 h-10 text-[#ffd9dc]" />
+          <BookOpen className="w-10 h-10 text-[#E8D5C4]" />
         </div>
 
-        <div className="bg-white p-5 border border-[#e1bec0] rounded-sm flex items-center justify-between">
+        <div className="bg-white p-5 border border-[#C9B5A3] rounded-sm flex items-center justify-between">
           <div>
             <span className="text-[10px] font-sans font-bold text-[#c6c6c7] uppercase">Bài thi Trọn vẹn</span>
-            <span className="block text-2xl font-black text-[#6f0022] mt-1 font-mono">
+            <span className="block text-2xl font-black text-[#663300] mt-1 font-mono">
               {progress.completedQuizzes.length > 0 ? "1" : "0"} / 1
             </span>
             <span className="text-xs font-serif text-[#5d5f5f] mt-1 block">Bộ đề trắc nghiệm hoàn tất</span>
           </div>
-          <CheckCircle2 className="w-10 h-10 text-[#ffd9dc]" />
+          <CheckCircle2 className="w-10 h-10 text-[#E8D5C4]" />
         </div>
 
-        <div className="bg-white p-5 border border-[#e1bec0] rounded-sm flex items-center justify-between">
+        <div className="bg-white p-5 border border-[#C9B5A3] rounded-sm flex items-center justify-between">
           <div>
             <span className="text-[10px] font-sans font-bold text-[#c6c6c7] uppercase">Số giờ Tích lũy</span>
-            <span className="block text-2xl font-black text-[#6f0022] mt-1 font-mono">25 phút</span>
+            <span className="block text-2xl font-black text-[#663300] mt-1 font-mono">25 phút</span>
             <span className="text-xs font-serif text-[#5d5f5f] mt-1 block">Tập trung nghiên cứu triệt để</span>
           </div>
-          <Clock className="w-10 h-10 text-[#ffd9dc]" />
+          <Clock className="w-10 h-10 text-[#E8D5C4]" />
         </div>
 
       </div>
 
       {/* Badges Cabinet Cabinet */}
       <div className="space-y-6">
-        <div className="border-b border-[#e1bec0] pb-3 text-left">
+        <div className="border-b border-[#C9B5A3] pb-3 text-left">
           <h3 className="font-sans font-extrabold text-xl text-[#1a1c1c]">
             Tủ Huân Chương Danh Dự
           </h3>
@@ -134,14 +134,14 @@ export default function ProfileTab({ progress, readTermsCount }: ProfileTabProps
                 key={badge.id}
                 className={`p-5 border rounded-sm flex gap-4 transition-all ${
                   isUnlocked
-                    ? "border-[#6f0022] bg-white shadow-sm"
+                    ? "border-[#663300] bg-white shadow-sm"
                     : "border-gray-200 bg-gray-50/50"
                 }`}
               >
                 {/* Badge Icon circle */}
                 <div className={`w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 border ${
                   isUnlocked
-                    ? "bg-[#ffd9dc] border-[#6f0022]"
+                    ? "bg-[#E8D5C4] border-[#663300]"
                     : "bg-[#eeeeee] border-gray-200"
                 }`}>
                   {isUnlocked ? (
@@ -176,7 +176,7 @@ export default function ProfileTab({ progress, readTermsCount }: ProfileTabProps
                       Yêu cầu: {badge.requirement}
                     </span>
                   ) : (
-                    <span className="text-[10px] font-sans font-bold text-[#6f0022] block pt-1">
+                    <span className="text-[10px] font-sans font-bold text-[#663300] block pt-1">
                       🔋 Nhận thưởng: Hoạt động học vấn hoàn chỉnh
                     </span>
                   )}

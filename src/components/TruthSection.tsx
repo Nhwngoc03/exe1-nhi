@@ -3,7 +3,7 @@ import { Sparkles, HelpCircle } from "lucide-react";
 
 export default function TruthSection() {
   return (
-    <section className="py-20 px-6 md:px-8 bg-[#6f0022] text-white relative overflow-hidden">
+    <section className="py-20 px-6 md:px-8 bg-[#663300] text-white relative overflow-hidden">
       {/* Decorative blurry glowing blobs inside matching the original prototype layout style */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
