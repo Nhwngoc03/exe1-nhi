@@ -53,19 +53,19 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
   ];
 
   return (
-    <section className="py-16 px-6 md:px-8 bg-white border-b border-[#e1bec0]">
+    <section className="py-16 px-6 md:px-8 bg-white border-b border-[#C9B5A3]">
       <div className="max-w-[1200px] mx-auto">
         <div className="grid grid-cols-12 gap-8 items-start mb-16">
           
           {/* Left Summary of Distortions */}
           <div className="col-span-12 lg:col-span-4 text-left">
-            <span className="text-[#6f0022] font-sans font-bold text-xs tracking-widest uppercase bg-[#ffd9dc] px-2 py-0.5 rounded-sm">
+            <span className="text-[#663300] font-sans font-bold text-xs tracking-widest uppercase bg-[#E8D5C4] px-2 py-0.5 rounded-sm">
               Tư duy Kỷ nguyên Số
             </span>
             <h2 className="text-3xl font-extrabold text-[#1a1c1c] font-sans mt-3 mb-6 leading-tight tracking-tight">
               Sai lệch Nhận thức trong Kỷ nguyên Số
             </h2>
-            <p className="font-serif text-sm text-[#5d5f5f] leading-relaxed text-justify">
+            <p className="font-serif text-sm text-[#8B7355] leading-relaxed text-justify">
               Tại sao hàng ngày hàng triệu trí thức vẫn mắc bẫy Tin giả (Fake News)? Lý lý nhận thức Mác - Lênin giúp ta nhận diện và thấu triệt những rào cản tư duy tinh vi nhất ngáng cản ta đến gần chân lý khách quan.
             </p>
           </div>
@@ -137,13 +137,13 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
         </div>
 
         {/* AI dialectical thinker helper playground */}
-        <div id="ai-analyzer-box" className="p-6 lg:p-8 border border-[#e1bec0] bg-gradient-to-br from-[#ffffff] to-[#eeeeee] rounded-sm text-left shadow-sm">
+            <div className="p-6 lg:p-8 border border-[#C9B5A3] bg-gradient-to-br from-[#ffffff] to-[#E8DED3] rounded-sm text-left shadow-sm">
           <div className="flex items-center gap-2 mb-4">
-            <div className="p-1.5 bg-[#ffd9dc] text-[#6f0022] rounded-sm">
+            <div className="p-1.5 bg-[#E8D5C4] text-[#663300] rounded-sm">
               <Sparkles className="w-5 h-5 animate-pulse" />
             </div>
             <div>
-              <h3 className="font-sans font-extrabold text-[#6f0022] text-sm">
+              <h3 className="font-sans font-extrabold text-[#663300] text-sm">
                 TRÌNH KIỂM CHỨNG & PHÂN TÍCH BIỆN CHỨNG (Dự án AI Mác-Lênin)
               </h3>
               <p className="font-serif text-xs text-[#5d5f5f]">
@@ -160,7 +160,7 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
                 onChange={(e) => setInputText(e.target.value)}
                 placeholder="Ví dụ: 'Uống giấm ăn sáng giúp cơ thể diệt mọi virus lạ...' hoặc 'Nhà đất mãi tăng giá, không bao giờ chịu tác động của khủng hoảng chu kỳ...'"
                 rows={5}
-                className="w-full p-4 border border-[#e1bec0] rounded-sm text-sm font-serif focus:outline-none focus:ring-2 focus:ring-[#6f0022]/40 focus:border-[#6f0022] bg-white text-black resize-none"
+                className="w-full p-4 border border-[#C9B5A3] rounded-sm text-sm font-serif focus:outline-none focus:ring-2 focus:ring-[#663300]/40 focus:border-[#663300] bg-white text-black resize-none"
               />
 
               <div className="flex flex-wrap gap-2">
@@ -169,7 +169,7 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
                     key={idx}
                     type="button"
                     onClick={() => setInputText(item.text)}
-                    className="p-2 border border-dashed border-[#e1bec0] hover:border-[#6f0022] bg-white text-[11px] font-sans text-[#5d5f5f] hover:text-[#6f0022] transition-all rounded-sm flex items-center gap-1"
+                    className="p-2 border border-dashed border-[#C9B5A3] hover:border-[#663300] bg-white text-[11px] font-sans text-[#8B7355] hover:text-[#663300] transition-all rounded-sm flex items-center gap-1"
                   >
                     Mẫu {idx + 1}: {item.title}
                   </button>
@@ -179,7 +179,7 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
               <button
                 disabled={loading || !inputText.trim()}
                 onClick={handleAIAnalyze}
-                className="w-full bg-[#6f0022] hover:bg-[#990033] text-white py-3.5 px-6 font-sans font-bold text-xs tracking-wider uppercase rounded-sm hover:shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                className="w-full bg-[#663300] hover:bg-[#8B5A2B] text-white py-3.5 px-6 font-sans font-bold text-xs tracking-wider uppercase rounded-sm hover:shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-50"
               >
                 {loading ? (
                   <>
@@ -204,7 +204,7 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
                 
                 {loading ? (
                   <div className="flex flex-col items-center justify-center py-10 text-center gap-3">
-                    <Loader2 className="w-8 h-8 text-[#6f0022] animate-spin" />
+                    <Loader2 className="w-8 h-8 text-[#663300] animate-spin" />
                     <p className="font-serif text-sm text-[#5d5f5f] animate-pulse">
                       Học giả ảo Gemini đang xem xét, áp dụng nguyên lý Lượng-Chất, Thống nhất đấu tranh của các mặt đối lập và Lý luận Thực tiễn để đưa phản ánh toàn diện...
                     </p>
@@ -222,7 +222,7 @@ export default function CognitiveDistortions({ onAddPoints, onUnlockBadge, isBad
                     <Shield className="w-12 h-12 mb-3 text-[#e1bec0]" />
                     <p className="font-serif text-xs text-[#5d5f5f]">
                       Điền lập luận vào hộp bên trái và nhấn Kích hoạt để xem giải trình học thuật. 
-                      Nhận ngay <strong className="text-[#6f0022]">+15 Điểm học thuật</strong> và Huy hiệu Tri thức đặc biệt!
+                      Nhận ngay <strong className="text-[#663300]">+15 Điểm học thuật</strong> và Huy hiểu Tri thức đặc biệt!
                     </p>
                   </div>
                 )}

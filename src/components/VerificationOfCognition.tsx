@@ -27,7 +27,7 @@ export default function VerificationOfCognition({ onAddPoints }: VerificationPro
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-[10px] sm:text-xs font-sans font-extrabold text-[#6f0022] tracking-widest uppercase bg-[#ffd9dc] px-2.5 py-1 rounded-sm inline-block mb-6">
+          <span className="text-[10px] sm:text-xs font-sans font-extrabold text-[#663300] tracking-widest uppercase bg-[#E8D5C4] px-2.5 py-1 rounded-sm inline-block mb-6">
             Chương V
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1a1c1c] mb-6 font-sans tracking-tight">
@@ -38,31 +38,31 @@ export default function VerificationOfCognition({ onAddPoints }: VerificationPro
         {/* Part 1: Why Verify Cognition */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
-            <AlertCircle className="w-8 h-8 text-[#6f0022] flex-shrink-0" />
+            <AlertCircle className="w-8 h-8 text-[#663300] flex-shrink-0" />
             <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1a1c1c] font-sans">
               Vì sao con người cần kiểm chứng nhận thức?
             </h3>
           </div>
 
-          <div className="bg-[#f0e8e9] border-l-4 border-[#6f0022] p-6 rounded-r-lg mb-8">
+          <div className="bg-[#E0D7CF] border-l-4 border-[#663300] p-6 rounded-r-lg mb-8">
             <p className="font-serif text-sm md:text-base text-[#1a1c1c] leading-relaxed mb-4">
               Mặc dù con người nhận thức thế giới thông qua cảm tính và lý tính, nhận thức vẫn có thể bị sai lệch bởi:
             </p>
             <div className="space-y-2 font-serif text-sm md:text-base text-[#3a3c3c]">
               <div className="flex items-start">
-                <span className="text-[#6f0022] font-bold mr-3">•</span>
+                <span className="text-[#663300] font-bold mr-3">•</span>
                 <span>Cảm xúc cá nhân</span>
               </div>
               <div className="flex items-start">
-                <span className="text-[#6f0022] font-bold mr-3">•</span>
+                <span className="text-[#663300] font-bold mr-3">•</span>
                 <span>Thông tin thiếu đầy đủ</span>
               </div>
               <div className="flex items-start">
-                <span className="text-[#6f0022] font-bold mr-3">•</span>
+                <span className="text-[#663300] font-bold mr-3">•</span>
                 <span>Hiệu ứng số đông</span>
               </div>
               <div className="flex items-start">
-                <span className="text-[#6f0022] font-bold mr-3">•</span>
+                <span className="text-[#663300] font-bold mr-3">•</span>
                 <span>Mạng xã hội, fake news, thuật toán truyền thông</span>
               </div>
             </div>
@@ -71,27 +71,27 @@ export default function VerificationOfCognition({ onAddPoints }: VerificationPro
             </p>
           </div>
 
-          <div className="bg-white border border-[#e1bec0] p-6 rounded-lg mb-8">
+          <div className="bg-white border border-[#C9B5A3] p-6 rounded-lg mb-8">
             <h4 className="font-sans font-bold text-lg text-[#1a1c1c] mb-4">Ví dụ về nhận thức sai:</h4>
             <ul className="space-y-2 font-serif text-sm md:text-base text-[#3a3c3c]">
               <li className="flex items-start">
-                <span className="text-[#6f0022] font-bold mr-3">✗</span>
+                <span className="text-[#663300] font-bold mr-3">✗</span>
                 <span>Nhìn một đoạn clip ngắn chưa chắc hiểu đúng sự việc</span>
               </li>
               <li className="flex items-start">
-                <span className="text-[#6f0022] font-bold mr-3">✗</span>
+                <span className="text-[#663300] font-bold mr-3">✗</span>
                 <span>Thấy nhiều người bình luận giống nhau chưa chắc thông tin đó đúng</span>
               </li>
               <li className="flex items-start">
-                <span className="text-[#6f0022] font-bold mr-3">✗</span>
+                <span className="text-[#663300] font-bold mr-3">✗</span>
                 <span>Cảm giác hoặc suy nghĩ cá nhân chưa chắc phản ánh đúng bản chất sự vật</span>
               </li>
             </ul>
           </div>
 
-          <div className="bg-[#ffd9dc] p-6 rounded-lg">
-            <p className="font-serif text-sm md:text-base text-[#6f0022] font-bold mb-3">Từ đó xuất hiện câu hỏi:</p>
-            <ul className="space-y-2 font-serif text-sm md:text-base text-[#6f0022]">
+          <div className="bg-[#E8D5C4] p-6 rounded-lg">
+            <p className="font-serif text-sm md:text-base text-[#663300] font-bold mb-3">Từ đó xuất hiện câu hỏi:</p>
+            <ul className="space-y-2 font-serif text-sm md:text-base text-[#663300]">
               <li className="flex items-start">
                 <span className="font-bold mr-3">?</span>
                 <span>Làm sao để biết nhận thức nào là đúng và nhận thức nào là sai?</span>
@@ -107,48 +107,48 @@ export default function VerificationOfCognition({ onAddPoints }: VerificationPro
         {/* Part 2: What is Practice */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
-            <Microscope className="w-8 h-8 text-[#6f0022] flex-shrink-0" />
+            <Microscope className="w-8 h-8 text-[#663300] flex-shrink-0" />
             <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1a1c1c] font-sans">
               Thực tiễn là gì?
             </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-[#f0e8e9] p-6 rounded-lg">
+            <div className="bg-[#E0D7CF] p-6 rounded-lg">
               <p className="font-serif text-sm text-[#3a3c3c] leading-relaxed">
-                <strong className="text-[#6f0022]">Hoạt động thực tế</strong>
+                <strong className="text-[#663300]">Hoạt động thực tế</strong>
               </p>
             </div>
-            <div className="bg-[#f0e8e9] p-6 rounded-lg">
+            <div className="bg-[#E0D7CF] p-6 rounded-lg">
               <p className="font-serif text-sm text-[#3a3c3c] leading-relaxed">
-                <strong className="text-[#6f0022]">Trải nghiệm thực tế</strong>
+                <strong className="text-[#663300]">Trải nghiệm thực tế</strong>
               </p>
             </div>
-            <div className="bg-[#f0e8e9] p-6 rounded-lg">
+            <div className="bg-[#E0D7CF] p-6 rounded-lg">
               <p className="font-serif text-sm text-[#3a3c3c] leading-relaxed">
-                <strong className="text-[#6f0022]">Thực nghiệm khoa học</strong>
+                <strong className="text-[#663300]">Thực nghiệm khoa học</strong>
               </p>
             </div>
-            <div className="bg-[#f0e8e9] p-6 rounded-lg">
+            <div className="bg-[#E0D7CF] p-6 rounded-lg">
               <p className="font-serif text-sm text-[#3a3c3c] leading-relaxed">
-                <strong className="text-[#6f0022]">Kiểm tra bằng hiện thực khách quan</strong>
+                <strong className="text-[#663300]">Kiểm tra bằng hiện thực khách quan</strong>
               </p>
             </div>
           </div>
 
-          <div className="bg-white border border-[#e1bec0] p-6 rounded-lg mt-6">
+          <div className="bg-white border border-[#C9B5A3] p-6 rounded-lg mt-6">
             <h4 className="font-sans font-bold text-lg text-[#1a1c1c] mb-4">Thông qua thực tiễn, con người sẽ:</h4>
             <ul className="space-y-3 font-serif text-sm md:text-base text-[#3a3c3c]">
               <li className="flex items-start">
-                <CheckCircle className="w-5 h-5 text-[#6f0022] flex-shrink-0 mr-3 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-[#663300] flex-shrink-0 mr-3 mt-0.5" />
                 <span>Đối chiếu nhận thức với thực tế</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle className="w-5 h-5 text-[#6f0022] flex-shrink-0 mr-3 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-[#663300] flex-shrink-0 mr-3 mt-0.5" />
                 <span>Kiểm tra kết quả</span>
               </li>
               <li className="flex items-start">
-                <CheckCircle className="w-5 h-5 text-[#6f0022] flex-shrink-0 mr-3 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-[#663300] flex-shrink-0 mr-3 mt-0.5" />
                 <span>Xác nhận điều đúng và bác bỏ điều sai</span>
               </li>
             </ul>
@@ -158,7 +158,7 @@ export default function VerificationOfCognition({ onAddPoints }: VerificationPro
         {/* Part 3: Examples */}
         <div className="mb-16">
           <div className="flex items-center gap-3 mb-8">
-            <TrendingUp className="w-8 h-8 text-[#6f0022] flex-shrink-0" />
+            <TrendingUp className="w-8 h-8 text-[#663300] flex-shrink-0" />
             <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1a1c1c] font-sans">
               Ví dụ cụ thể
             </h3>
@@ -167,10 +167,10 @@ export default function VerificationOfCognition({ onAddPoints }: VerificationPro
           <div className="space-y-6">
             {/* Example 1: Galileo */}
             <div
-              className="border border-[#e1bec0] rounded-lg overflow-hidden cursor-pointer hover:shadow-md transition-all"
+              className="border border-[#C9B5A3] rounded-lg overflow-hidden cursor-pointer hover:shadow-md transition-all"
               onClick={() => handleExpandExample("galileo")}
             >
-              <div className="bg-[#f0e8e9] p-6">
+              <div className="bg-[#E0D7CF] p-6">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h4 className="font-sans font-bold text-lg text-[#1a1c1c] mb-2">
@@ -180,14 +180,14 @@ export default function VerificationOfCognition({ onAddPoints }: VerificationPro
                       Theo Aristotle: "Vật nặng sẽ rơi nhanh hơn vật nhẹ"
                     </p>
                   </div>
-                  <span className="text-[#6f0022] ml-3 flex-shrink-0">{expandedExample === "galileo" ? "▲" : "▼"}</span>
+                  <span className="text-[#663300] ml-3 flex-shrink-0">{expandedExample === "galileo" ? "▲" : "▼"}</span>
                 </div>
               </div>
 
               {expandedExample === "galileo" && (
-                <div className="bg-white p-6 border-t border-[#e1bec0] space-y-4">
-                  <div className="bg-[#ffd9dc] p-4 rounded">
-                    <p className="font-serif text-sm text-[#6f0022] font-bold mb-2">📊 Nhận thức cũ:</p>
+                <div className="bg-white p-6 border-t border-[#C9B5A3] space-y-4">
+                  <div className="bg-[#E8D5C4] p-4 rounded">
+                    <p className="font-serif text-sm text-[#663300] font-bold mb-2">📊 Nhận thức cũ:</p>
                     <p className="font-serif text-sm text-[#3a3c3c]">
                       Nhận định này từng là phổ biến trong thời gian dài vì nghe có vẻ hợp lý, phù hợp với cảm giác trực quan
                     </p>
@@ -200,26 +200,26 @@ export default function VerificationOfCognition({ onAddPoints }: VerificationPro
                     </p>
                   </div>
 
-                  <div className="bg-[#f0e8e9] p-4 rounded">
+                  <div className="bg-[#E0D7CF] p-4 rounded">
                     <p className="font-serif text-sm text-[#1a1c1c] font-bold mb-2">✓ Kết quả:</p>
                     <ul className="space-y-2 font-serif text-sm text-[#3a3c3c]">
                       <li className="flex items-start">
-                        <span className="text-[#6f0022] font-bold mr-3">•</span>
+                        <span className="text-[#663300] font-bold mr-3">•</span>
                         <span>Trong cùng điều kiện, các vật rơi với gia tốc đều như nhau</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[#6f0022] font-bold mr-3">•</span>
+                        <span className="text-[#663300] font-bold mr-3">•</span>
                         <span>Vật nặng không rơi nhanh hơn vật nhẹ như người ta từng nghĩ</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-[#6f0022] font-bold mr-3">•</span>
+                        <span className="text-[#663300] font-bold mr-3">•</span>
                         <span>Sự khác biệt chủ yếu đến từ lực cản không khí</span>
                       </li>
                     </ul>
                   </div>
 
-                  <div className="bg-[#ffd9dc] p-4 rounded">
-                    <p className="font-serif text-sm text-[#6f0022] font-bold">
+                  <div className="bg-[#E8D5C4] p-4 rounded">
+                    <p className="font-serif text-sm text-[#663300] font-bold">
                       → Thực tiễn bác bỏ nhận thức sai và xác nhận nhận thức mới phù hợp với hiện thực khách quan
                     </p>
                   </div>

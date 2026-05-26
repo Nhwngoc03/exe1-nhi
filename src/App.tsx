@@ -10,6 +10,9 @@ import VerificationOfCognition from "./components/VerificationOfCognition";
 import TruthSection from "./components/TruthSection";
 import LibraryTab from "./components/LibraryTab";
 import QuizTab from "./components/QuizTab";
+import LeaderboardTab from "./components/LeaderboardTab";
+import { submitScore } from "./utils/leaderboard";
+
 
 import { UserProgress, Badge } from "./types";
 import { badges, scenarios } from "./data";
@@ -77,6 +80,8 @@ export default function App() {
       return newVal;
     });
   };
+  // loi deploy
+  // loi deployyy fix đ đưođư
 
   // Badge unlock helper
   const unlockBadge = (badgeId: string) => {
@@ -104,6 +109,15 @@ export default function App() {
   const handleCompleteQuiz = (quizId: string) => {
     if (!completedQuizzes.includes(quizId)) {
       setCompletedQuizzes((prev) => [...prev, quizId]);
+    }
+  };
+
+  const handleSubmitScore = async (name: string, score: number): Promise<boolean> => {
+    try {
+      return await submitScore(name, score);
+    } catch (e) {
+      console.error("Lỗi gửi điểm:", e);
+      return false;
     }
   };
 
@@ -149,7 +163,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f9f9f9] text-[#1a1c1c] selection:bg-[#ffd9dc] selection:text-[#6f0022]">
+    <div className="min-h-screen flex flex-col bg-[#f9f9f9] text-[#1a1c1c] selection:bg-[#E8D5C4] selection:text-[#663300]">
       {/* Structural Header Area with reactive points summary */}
       <Header 
         activeTab={activeTab} 
@@ -190,21 +204,21 @@ export default function App() {
             <TruthSection />
 
             {/* Quick entry links to test quiz */}
-            <section className="bg-white py-14 border-t border-b border-[#e1bec0] px-6 text-center">
+            <section className="bg-white py-14 border-t border-b border-[#C9B5A3] px-6 text-center">
               <div className="max-w-[850px] mx-auto space-y-6">
-                <span className="text-[10px] sm:text-xs font-sans font-extrabold text-[#6f0022] tracking-widest uppercase bg-[#ffd9dc] px-2.5 py-1 rounded-sm">
+                <span className="text-[10px] sm:text-xs font-sans font-extrabold text-[#663300] tracking-widest uppercase bg-[#E8D5C4] px-2.5 py-1 rounded-sm">
                   Đánh giá lý thuyết
                 </span>
                 <h3 className="font-sans font-black text-2xl text-[#1a1c1c] tracking-tight">
                   Sẵn sàng giải mã học thuyết Triết học để kiểm danh hiệu?
                 </h3>
-                <p className="font-serif text-sm text-[#5d5f5f] leading-relaxed max-w-xl mx-auto">
+                <p className="font-serif text-sm text-[#8B7355] leading-relaxed max-w-xl mx-auto">
                   Trải nghiệm đợt trắc nghiệm độc lập giúp ghi nhớ sâu sắc các quy luật cơ bản của ý thức và thế giới quan khoa học.
                 </p>
                 <div className="flex justify-center gap-4">
                   <button
                     onClick={() => setActiveTab("quiz")}
-                    className="bg-[#6f0022] hover:bg-[#990033] text-white font-sans font-bold text-xs tracking-widest px-8 py-3.5 rounded-sm transition-all"
+                    className="bg-[#663300] hover:bg-[#8B5A2B] text-white font-sans font-bold text-xs tracking-widest px-8 py-3.5 rounded-sm transition-all"
                   >
                     MỞ ĐỀ KIỂM TRA TRẮC NGHIỆM
                   </button>
@@ -230,6 +244,15 @@ export default function App() {
             onCompleteQuiz={handleCompleteQuiz} 
             onUnlockBadge={unlockBadge} 
             isBadgeUnlocked={isBadgeUnlocked} 
+            onSubmitScore={handleSubmitScore}
+            onGoToLeaderboard={() => setActiveTab("leaderboard")}
+          />
+        )}
+
+        {/* Tab 5: Bảng xếp hạng */}
+        {activeTab === "leaderboard" && (
+          <LeaderboardTab 
+            userPoints={userPoints} 
           />
         )}
       </main>

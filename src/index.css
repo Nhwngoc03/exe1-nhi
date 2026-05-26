@@ -4,16 +4,16 @@
   --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Source Serif 4", ui-serif, Georgia, Cambria, serif;
 
-  --color-primary: #6f0022;
-  --color-primary-container: #990033;
-  --color-primary-fixed: #ffd9dc;
-  --color-primary-fixed-dim: #ffb2ba;
+  --color-primary: #663300;
+  --color-primary-container: #8B5A2B;
+  --color-primary-fixed: #E8D5C4;
+  --color-primary-fixed-dim: #D4BBAA;
   
-  --color-secondary: #5d5f5f;
-  --color-secondary-container: #dfe0e0;
+  --color-secondary: #8B7355;
+  --color-secondary-container: #D4C4B0;
   
-  --color-tertiary: #343434;
-  --color-tertiary-container: #4b4b4b;
+  --color-tertiary: #5C4033;
+  --color-tertiary-container: #6B5344;
 
   --color-background: #f9f9f9;
   --color-surface: #f9f9f9;
@@ -24,10 +24,10 @@
   --color-surface-highest: #e2e2e2;
 
   --color-on-surface: #1a1c1c;
-  --color-on-surface-variant: #594043;
+  --color-on-surface-variant: #8B6F47;
   
-  --color-outline: #8d7072;
-  --color-outline-variant: #e1bec0;
+  --color-outline: #A89070;
+  --color-outline-variant: #C9B5A3;
 }
 
 @layer utilities {
@@ -46,11 +46,11 @@
     background: #f9f9f9;
   }
   ::-webkit-scrollbar-thumb {
-    background: #e1bec0;
+    background: #C9B5A3;
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #8d7072;
+    background: #A89070;
   }
 }
 
