@@ -26,7 +26,7 @@ export default function QuizTab({
   const [quizScore, setQuizScore] = useState<number>(0);
   const [quizFinished, setQuizFinished] = useState<boolean>(false);
   const [answeredWrongCount, setAnsweredWrongCount] = useState<number>(0);
-  const [timeLeft, setTimeLeft] = useState<number>(300); // 5 phút = 300 giây
+  const [timeLeft, setTimeLeft] = useState<number>(180); // 3 phút = 180 giây
   const [quizStarted, setQuizStarted] = useState<boolean>(true);
 
   // Leaderboard states
@@ -121,7 +121,7 @@ export default function QuizTab({
     setAnsweredWrongCount(0);
     setScoreSubmitted(false);
     setSubmitError(null);
-    setTimeLeft(300); // Reset timer về 5 phút
+    setTimeLeft(180); // Reset timer về 3 phút
     setQuizStarted(true);
   };
 
@@ -139,7 +139,7 @@ export default function QuizTab({
             <div className="p-4 bg-red-50 border border-red-200 text-red-900 rounded-sm text-xs font-sans flex items-start gap-3">
               <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
               <div>
-                <strong>⏰ Hết giờ!</strong> Thời gian làm bài 5 phút đã kết thúc. Hệ thống tự động nộp bài.
+                <strong>⏰ Hết giờ!</strong> Thời gian làm bài 3 phút đã kết thúc. Hệ thống tự động nộp bài.
               </div>
             </div>
           )}
@@ -149,7 +149,7 @@ export default function QuizTab({
           </h2>
           
           <p className="font-serif text-sm text-[#5d5f5f] max-w-lg mx-auto">
-            Chúc mừng bạn đã hoàn tất đợt khảo cứu lý luận nhận thức và thế giới quan khách quan thành công mỹ mãn!
+            Chúc mừng bạn đã hoàn tất đợt khảo cứu  nhận thức và thế giới quan khách quan thành công mỹ mãn!
           </p>
 
           <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto pt-4">

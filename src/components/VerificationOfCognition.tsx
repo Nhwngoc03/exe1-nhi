@@ -109,7 +109,7 @@ export default function VerificationOfCognition({ onAddPoints }: VerificationPro
           <div className="flex items-center gap-3 mb-8">
             <Microscope className="w-8 h-8 text-[#663300] flex-shrink-0" />
             <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1a1c1c] font-sans">
-              Thực tiễn là gì?
+              Thực tiễn kiểm chứng như thế nào?
             </h3>
           </div>
 
