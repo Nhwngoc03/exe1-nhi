@@ -1,5 +1,5 @@
 import React from "react";
-import { BookOpen, Map, Sparkles, BookMarked, Trophy, BookText } from "lucide-react";
+import { BookOpen, Map, Sparkles, BookMarked, Trophy } from "lucide-react";
 
 interface HeaderProps {
   activeTab: string;
@@ -29,7 +29,6 @@ export default function Header({ activeTab, setActiveTab, userPoints }: HeaderPr
           {[
             { id: "curriculum", label: "Lộ trình" },
             { id: "library", label: "Thư viện" },
-            { id: "flipbook", label: "Sách lật" },
             { id: "leaderboard", label: "Xếp hạng" },
           ].map((tab) => {
             const isActive = activeTab === tab.id;
@@ -62,7 +61,6 @@ export default function Header({ activeTab, setActiveTab, userPoints }: HeaderPr
         {[
           { id: "curriculum", label: "Lộ trình", icon: Map },
           { id: "library", label: "Thư viện", icon: BookMarked },
-          { id: "flipbook", label: "Sách lật", icon: BookText },
           { id: "leaderboard", label: "Xếp hạng", icon: Trophy },
         ].map((tab) => {
           const Icon = tab.icon;

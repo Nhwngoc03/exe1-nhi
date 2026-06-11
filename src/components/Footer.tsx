@@ -22,6 +22,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
         <div className="flex gap-8 font-sans text-sm font-medium text-[#5d5f5f]">
           <a href="#" className="hover:text-[#663300] transition-colors">Điều khoản</a>
           <a href="#" className="hover:text-[#663300] transition-colors">Bảo mật</a>
+          <a href="https://truth-and-cognition.netlify.app/#p=2" className="hover:text-[#663300] transition-colors">Lý luận nhận thức</a>
           <a href="#" className="hover:text-[#663300] transition-colors">Liên hệ</a>
         </div>
         

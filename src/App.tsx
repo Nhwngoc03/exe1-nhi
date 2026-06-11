@@ -9,7 +9,6 @@ import DistortedPerception from "./components/DistortedPerception";
 import VerificationOfCognition from "./components/VerificationOfCognition";
 import TruthSection from "./components/TruthSection";
 import LibraryTab from "./components/LibraryTab";
-import FlipBook from "./components/FlipBook";
 import QuizTab from "./components/QuizTab";
 import LeaderboardTab from "./components/LeaderboardTab";
 import { submitScore } from "./utils/leaderboard";
@@ -213,6 +212,29 @@ export default function App() {
               />
             </div>
 
+            {/* Books Reading Section */}
+            <section className="bg-white py-14 border-t border-b border-[#C9B5A3] px-6 text-center">
+              <div className="max-w-[850px] mx-auto space-y-6">
+                <span className="text-[10px] sm:text-xs font-sans font-extrabold text-[#663300] tracking-widest uppercase bg-[#E8D5C4] px-2.5 py-1 rounded-sm">
+                  Sách Đọc
+                </span>
+                <h3 className="font-sans font-black text-2xl text-[#1a1c1c] tracking-tight">
+                  Khám phá những cuốn sách triết học cơ bản
+                </h3>
+                <p className="font-serif text-sm text-[#8B7355] leading-relaxed max-w-xl mx-auto">
+                  Tìm hiểu sâu hơn về lý luận Mác - Lênin thông qua các tài liệu lý thuyết và sách chuyên khảo.
+                </p>
+                <div className="flex justify-center gap-4">
+                  <a
+                    href="https://truth-and-cognition.netlify.app/#p=2"
+                    className="bg-[#663300] hover:bg-[#8B5A2B] text-white font-sans font-bold text-xs tracking-widest px-8 py-3.5 rounded-sm transition-all inline-block"
+                  >
+                    ĐỌC SÁCH TRIẾT HỌC
+                  </a>
+                </div>
+              </div>
+            </section>
+
             {/* Quick entry links to test quiz */}
             <section className="bg-white py-14 border-t border-b border-[#C9B5A3] px-6 text-center">
               <div className="max-w-[850px] mx-auto space-y-6">
@@ -246,9 +268,6 @@ export default function App() {
             readTerms={readTerms} 
           />
         )}
-
-        {/* Tab: Sách lật */}
-        {activeTab === "flipbook" && <FlipBook />}
 
         {/* Tab 4: Đánh giá trắc nghiệm chính thức */}
         {activeTab === "quiz" && (
