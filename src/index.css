@@ -63,3 +63,33 @@
 .animate-fade-in {
   animation: fadeIn 0.4s ease-out forwards;
 }
+
+/* ── FlipBook 3D page-turn animations ─────────────────────────── */
+@keyframes bpFlipNext {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(-180deg); }
+}
+@keyframes bpFlipPrev {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(180deg); }
+}
+.bp-flip-next {
+  animation: bpFlipNext 0.68s cubic-bezier(0.45, 0, 0.55, 1) forwards;
+}
+.bp-flip-prev {
+  animation: bpFlipPrev 0.68s cubic-bezier(0.45, 0, 0.55, 1) forwards;
+}
+.bp-face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.bp-face-back {
+  transform: rotateY(180deg);
+}
+@keyframes bpMobileIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.bp-mobile-in {
+  animation: bpMobileIn 0.28s ease forwards;
+}

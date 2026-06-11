@@ -159,7 +159,7 @@ export default function PracticalitySection({ onAddPoints }: PracticalitySection
         {/* Section Header */}
         <div className="mb-8">
           <span className="text-[#663300] font-sans font-bold text-xs tracking-widest uppercase bg-[#E8D5C4] px-3 py-1 rounded-sm">
-            Chương II: Lý luận nhận thức
+            II: Lý luận nhận thức
           </span>
           <h2 className="text-3xl font-extrabold text-[#1a1c1c] font-sans mt-3 mb-2 tracking-tight">
             Thực Tiễn — Nền Tảng Của Nhận Thức

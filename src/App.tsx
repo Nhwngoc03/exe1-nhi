@@ -9,6 +9,7 @@ import DistortedPerception from "./components/DistortedPerception";
 import VerificationOfCognition from "./components/VerificationOfCognition";
 import TruthSection from "./components/TruthSection";
 import LibraryTab from "./components/LibraryTab";
+import FlipBook from "./components/FlipBook";
 import QuizTab from "./components/QuizTab";
 import LeaderboardTab from "./components/LeaderboardTab";
 import { submitScore } from "./utils/leaderboard";
@@ -203,6 +204,15 @@ export default function App() {
             {/* Concept section explaining Truth */}
             <TruthSection />
 
+            {/* Library Section - Always displayed */}
+            <div className="border-t border-[#C9B5A3]">
+              <LibraryTab 
+                onAddPoints={addPoints} 
+                onReadTerm={handleReadTerm} 
+                readTerms={readTerms} 
+              />
+            </div>
+
             {/* Quick entry links to test quiz */}
             <section className="bg-white py-14 border-t border-b border-[#C9B5A3] px-6 text-center">
               <div className="max-w-[850px] mx-auto space-y-6">
@@ -236,6 +246,9 @@ export default function App() {
             readTerms={readTerms} 
           />
         )}
+
+        {/* Tab: Sách lật */}
+        {activeTab === "flipbook" && <FlipBook />}
 
         {/* Tab 4: Đánh giá trắc nghiệm chính thức */}
         {activeTab === "quiz" && (
