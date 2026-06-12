@@ -11,6 +11,7 @@ import TruthSection from "./components/TruthSection";
 import LibraryTab from "./components/LibraryTab";
 import QuizTab from "./components/QuizTab";
 import LeaderboardTab from "./components/LeaderboardTab";
+import AIUsageAppendix from "./components/AIUsageAppendix";
 import { submitScore } from "./utils/leaderboard";
 
 
@@ -257,6 +258,9 @@ export default function App() {
                 </div>
               </div>
             </section>
+
+            {/* AI Usage Appendix */}
+            <AIUsageAppendix />
           </div>
         )}
 
